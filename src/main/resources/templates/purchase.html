@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+
+    <title>Purchase of Building -- squareStone</title>
+
+    <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
+    <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
+    <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
+    <!--preload map, change BODY link too if needed:-->
+    <link rel="preload"
+          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${gMap}+'&amp;q='+${offAddy}+'&amp;zoom=13'}"
+          href="https://www.google.com/maps/embed/v1/" as="document"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="commercial, estimating, asheville, nc, north carolina"/>
+    <meta name="description" content="CK"/>
+    <meta name="robots" content="index,follow"/>
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
+    <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
+    <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
+
+    <!--<script type="text/javascript" th:src="@{/scripts/velocity.min.js}" src="/static/scripts/velocity.min.js"></script>-->
+    <script th:src="@{/scripts/viewport.js}" src="../static/scripts/viewport.js"></script>
+
+</head>
+
+<!--//body border:-->
+<div id="left"></div>
+<div id="right"></div>
+<div id="top"></div>
+<div id="bottom"></div>
+
+<div class="backborder"></div>
+
+
+<body>
+<div class="container">
+
+    <div class="row top">
+
+        <div class="four columns profile">
+            <p class="profileText">Back Home</p>
+
+            <a th:href="@{index}" href="index.html" rel="#home">
+                <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
+                     class="profile pic shade"/>
+            </a>
+        </div>
+
+        <div class="eight columns name">
+            <h1 class="text shadow link">squareStone</h1>
+
+
+            <h2 class="text shadow link u-pull-left">Commercial Property Analysis
+            </h2>
+
+        </div>
+        <br/>
+        <!--CHANGE CURRENT color per page:-->
+        <div class="ten columns menuBar">
+            <a th:href="@{links}" href="links.html">
+                <p class="text menu shadow none">Links
+                </p>
+            </a>
+            <a th:href="@{contact}" href="contact.html">
+                <p class="menu text shadow none">Contact</p>
+            </a>
+            <a th:href="@{about}" href="about.html">
+                <p class="text menu shadow none">About
+                </p>
+            </a>
+
+        </div><!--row two menu-->
+
+    </div><!--row top-->
+
+
+    <div class="row middle">
+
+        <form th:action="@{/purchase}" action="#" th:object="${purchase}" method="post">
+            <table class="twelve columns">
+
+                <!--&lt;!&ndash;HEADER&ndash;&gt;-->
+                <!--<tr>-->
+                <!--<th><h1 class="tableHeader">Purchase of Building</h1></th>-->
+                <!--<th style="padding-bottom: 0"><h2 class="tableHeader h2">Costs associated with purchase</h2></th>-->
+                <!--</tr>-->
+
+                <!--HEADER-->
+                <tr>
+
+                    <th>
+                        <h1 class="tableHeader">Purchase of Building</h1>
+                    </th>
+
+                    <th style="vertical-align: bottom">
+                        <h2 class="tableHeader h2">Costs associated with purchase</h2>
+                    </th>
+                </tr>
+
+                <!--ROW 1-->
+                <tr>
+                    <td><label class="tableLabel" for="purchasePrice">Purchase Price:</label>
+                        <input class="tableField" type="text" th:field="*{purchasePrice}" id="purchasePrice" value="0"/>
+                    </td>
+
+                    <td><label class="tableLabel" for="appraisal"
+                               th:for="appraisal">Appraisal:</label>
+                        <input class="tableField" type="text" th:field="*{appraisal}" th:value="0" value="0"
+                               id="appraisal"/></td>
+                </tr>
+
+                <!--ROW 2-->
+                <tr>
+                    <td></td>
+                    <td><label class="tableLabel" for="survey">Survey Fee:</label>
+                        <input class="tableField" type="text" th:field="*{survey}" id="survey"/></td>
+                </tr>
+
+                <!--ROW 3-->
+                <tr>
+                    <td></td>
+                    <td><label class="tableLabel" for="attyFee">Attorney's Fees:</label>
+                        <input class="tableField" type="text" th:field="*{attyFee}" id="attyFee"/></td>
+                </tr>
+
+                <!--ROW 4-->
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend class="tableLegend">Miscellaneous Costs:</legend>
+                            <label class="tableLabel" for="miscCost1"></label>
+                            <input class="tableField" type="text" th:field="*{miscCost1}" id="miscCost1"/>
+                            <label class="tableLabel" for="miscCost2"></label>
+                            <input class="tableField" type="text" th:field="*{miscCost2}" id="miscCost2"/>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend class="tableLegend">Environment assessment:</legend>
+                            <label class="tableLabel" for="ph1EnvAssess">Phase I :</label>
+                            <input class="tableField" type="text" th:field="*{ph1EnvAssess}" id="ph1EnvAssess"/>
+                            <br/>
+                            <label class="tableLabel" for="ph2EnvAssess">Phase II:</label>
+                            <input class="tableField" type="text" th:field="*{ph2EnvAssess}" id="ph2EnvAssess"/>
+                        </fieldset>
+                    </td>
+                </tr>
+
+                <!--ROW 5-->
+                <!--5-->
+
+                <tr>
+                    <td></td>
+
+                    <td><label class="tableLabel" for="roofInsp">Roof Inspection:</label>
+                        <input class="tableField" type="text" th:field="*{roofInsp}" id="roofInsp" value="0"/></td>
+                </tr>
+
+
+                <!--want as fragment/insert (@ top?):-->
+
+                <tr>
+                    <td></td>
+                    <td><label class="tableLabel">Additional cost sum:</label>
+                        <code class="tableField" th:text="${purchase.addtCostSum}">(addCostTotal)</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label class="tableLabel">Total purchase costs:</label>
+                        <code class="tableField" style="text-decoration: blink" th:text="${purchase.totalCost}">(TotalCost)</code>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td><input class="button" type="submit" value="Submit"/></td>
+                </tr>
+
+            </table><!--six columns R-->
+        </form>
+
+    </div><!--row middle-->
+
+
+</div><!--container-->
+</body>
+</html>
