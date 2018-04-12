@@ -13,6 +13,12 @@ public class PrimaryController {
 
 //    final private Purchase purchase = new Purchase();
 
+//
+
+    @RequestMapping(value = {"/", "/index", "/home"}, method = RequestMethod.GET)
+    public String index(@RequestParam(value = "param", required = false, defaultValue = "null") String param, Model model) {
+        return "index";
+    }
 
     @ModelAttribute("purchase")
     public Purchase purchase() {
@@ -29,10 +35,6 @@ public class PrimaryController {
         return new GMap();
     }
 
-    @RequestMapping(value = {"/", "/index"}, method = RequestMethod.GET)
-    public String index(@RequestParam(value = "param", required = false, defaultValue = "null") String param, Model model) {
-        return "index";
-    }
 
     @GetMapping("/purchase")
     public String purchase(@ModelAttribute Purchase purchase) {
@@ -46,8 +48,12 @@ public class PrimaryController {
         System.out.println("Appraisal:" + purchase.getAppraisal());
         System.out.println("AddtCostSum:" + purchase.getAddtCostSum());
         System.out.println("totalCost: " + purchase.getTotalCost());
-
         return "purchase";
+    }
+
+    @RequestMapping("/comingSoon")
+    public String comingSoon() {
+        return "comingSoon";
     }
 
     @GetMapping("/map*")
@@ -77,7 +83,6 @@ public class PrimaryController {
         return "links";
     }
 
-
     //finish:
     @ExceptionHandler
     public String error(Exception e) throws Exception {
@@ -86,4 +91,3 @@ public class PrimaryController {
 
 
 }
-

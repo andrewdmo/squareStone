@@ -44,35 +44,42 @@
         <div class="four columns profile">
             <p class="profileText">Back Home</p>
 
-            <a th:href="@{index}" href="index.html" rel="#home">
+            <a th:href="@{/index}" href="index.html" rel="#home">
                 <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
                      class="profile pic shade"/>
             </a>
         </div>
 
         <div class="eight columns name">
-            <h1 class="text shadow link">squareStone</h1>
+            <a th:href="@{/index}" href="index.html">
+                <h1 class="text shadow link">squareStone</h1></a>
 
-
-            <h2 class="text shadow link u-pull-left">Commercial Property Analysis
-            </h2>
+            <a th:href="@{/index}" href="index.html">
+                <h2 class="text shadow link u-pull-left">Commercial Property Analysis
+                </h2></a>
 
         </div>
         <br/>
         <!--CHANGE CURRENT color per page:-->
         <div class="ten columns menuBar">
-            <a th:href="@{links}" href="links.html">
+            <a th:href="@{/links}" href="links.html">
                 <p class="text menu shadow none">Links
                 </p>
             </a>
-            <a th:href="@{contact}" href="contact.html">
+            <a th:href="@{/contact}" href="contact.html">
                 <p class="menu text shadow none">Contact</p>
             </a>
-            <a th:href="@{about}" href="about.html">
+            <a th:href="@{/about}" href="about.html">
                 <p class="text menu shadow none">About
                 </p>
             </a>
 
+            <a th:href="@{/home}" href="index.html" rel="#home">
+                <p class="text menu home shadow none">Home
+                </p>
+            </a>
+            <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
+            <!--</p>-->
         </div><!--row two menu-->
 
     </div><!--row top-->
@@ -80,36 +87,67 @@
 
     <div class="row middle">
 
-        <div class="six columns">
-            <p class="idxText">
+        <div class="six columns main text">
+            <p>
                 Behold the world's finest Analysis Engine for Commercial Properties.
             </p>
-            <p class="idxText">
+            <p>
                 The oft-dreamt tool of architects, builders, and investors alike is here
                 [in
                 beta].
             </p>
         </div>
-
         <br/>
-
-        <div class="six columns headShotBack u-pull-right">
-            <a th:href="@{about}" href="about.html">
-                <img class="pic headShot idx shade" th:src="@{img/sqStSheet.jpg}"
+        <div class="six columns main back">
+            <a th:href="@{/about}" href="about.html">
+                <img class="headShot pic shade" th:src="@{img/sqStSheet.jpg}"
                      src="../static/img/sqStSheet.jpg"/>
             </a>
         </div>
     </div><!--row middle-->
 
-    <div class="row midButton">
-        <a th:href="@{/purchase}" href="purchase.html">
-            <button class="six columns">
 
-            </button>
+    <!--BUTTONS/TABS:-->
+    <div class="row middle tabs">
 
+        <div class="row 1">
 
-        </a>
+            <div class="six columns">
+                <a th:href="@{/purchase}" href="purchase.html">
+                    <button>
+                        Purchase Costs
+                    </button>
+                </a>
+            </div>
 
+            <div class="six columns">
+                <a th:href="@{/comingSoon}" href="comingSoon.html">
+                    <button>
+                        Revenue
+                    </button>
+                </a>
+            </div>
+
+        </div><!--row 1-->
+
+        <div class="row 2">
+
+            <div class="six columns">
+                <a th:href="@{/comingSoon}" href="comingSoon.html">
+                    <button>
+                        Space Dimensions
+                    </button>
+                </a>
+            </div>
+
+            <div class="six columns">
+                <a th:href="@{/comingSoon}" href="comingSoon.html">
+                    <button>
+                        Operating Costs
+                    </button>
+                </a>
+            </div>
+        </div><!--row 2-->
 
     </div><!--row midButton-->
 

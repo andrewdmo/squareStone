@@ -11,9 +11,8 @@
 body {
     /*background: #8e8a2d;*/
     background: linear-gradient(
-            to bottom right,
-            #ffffff,
-            lightsteelblue) no-repeat fixed; /*background: url("../img/IMG_4979.jpg") center fixed no-repeat;*/
+            to bottom right, #ffffff,
+            lightsteelblue 15%, #8d8a7e 95%) no-repeat fixed; /*background: url("../img/IMG_4979.jpg") center fixed no-repeat;*/
     background-size: cover;
     min-height: 150vh;
     /*width: 100vmin;*/
@@ -29,6 +28,7 @@ body {
     line-height: calc(1.1em + 0.5vw);
     /*margin: .5em; !*CAREFUL*!*/
     transition: all .5s;
+    overflow: visible;
 }
 
 /*gMap scrolling:*/
@@ -88,6 +88,59 @@ legend {
     /*z-index: 1;*/
 }
 
+/*button,*/
+/*.button {*/
+/*will-change: color, border;*/
+/*color: lightsteelblue;*/
+/*background-color: #ff7e27;*/
+/*border: transparent 1vw;*/
+/*margin: auto;*/
+/*box-sizing: border-box;*/
+/*}*/
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    will-change: color, border;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    color: #bfbf56;
+    background-color: #8d8a7e;
+    border: #073763 solid 2px;
+    /*margin: 5vh auto;*/
+    width: 100%;
+    vertical-align: center;
+    transition: all .5s;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    color: #8f3900;
+    border: #8f3900 solid 2px;
+    overflow: visible;
+    transition: all .5s;
+
+}
+
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    color: #b8b23a;
+    border: #b8b23a solid 2px;
+    box-sizing: border-box;
+    transition: all .25s;
+
+}
+
 .copy {
     margin: 1vmin;
     padding: 1vmin;
@@ -98,7 +151,7 @@ legend {
 }
 
 .current {
-    color: #bfbf56 !important;
+    color: #8d8a7e !important;
 }
 
 .current:hover {
@@ -106,32 +159,20 @@ legend {
 }
 
 .headShot {
-    will-change: transform;
-    margin: 1.3vmin 33% 1vmin 33% !important;
-    width: 45%;
-    /*min-height: 20vh;*/
-    border-radius: 5px;
-    box-sizing: content-box;
+    will-change: transform, height, width;
+    margin: 1vmin auto 1vmin auto !important;
+    /*height: 100%;*/
+    width: 100%;
+    max-width: 30vw;
+    /*height: 20vh;*/
+    border-radius: 2px;
+    box-sizing: border-box;
+    float: right;
 }
 
 .headShot:hover {
     will-change: transform;
     transform: scale(1.1);
-}
-
-.headShotBack {
-    background-color: #073763;
-    border-radius: 5px;
-    margin: 1vmin auto;
-    width: 100%;
-}
-
-.headShot.idx {
-    margin: 1vmin 33% 1vmin 33% !important;
-}
-
-.idxText {
-    alignment: right;
 }
 
 li,
@@ -148,6 +189,27 @@ li,
     will-change: color, border;
     color: #8f3900;
     border: #343434 2px !important;
+}
+
+.main {
+    border: 2px solid #073763;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.main.back {
+    background-color: #8d8a7e;
+    border-radius: inherit;
+    margin: 1vmin 0;
+    padding: 1vmin;
+    float: right;
+}
+
+.main.text {
+    border-radius: inherit;
+    margin: 1vmin 0;
+    padding: 1vmin;
+    font-size: calc(12px + 0.2vw);
 }
 
 .map {
@@ -199,6 +261,11 @@ li,
     z-index: 8;
 }
 
+.menu.home {
+    color: #073763;
+    float: left;
+}
+
 .menu:hover {
     will-change: transform, color; /*keep here*/
     color: rgba(70, 149, 238, 0.7);
@@ -218,7 +285,7 @@ li,
     background: #8f3900;
     /*background: rgba(45, 45, 124, 0.87);*/
     background-size: cover;
-    border: 2px solid rgba(8, 26, 215, 0.7);
+    border: 2px solid #073763;
     /*border: 1px solid #8f3900;*/
     border-radius: 5px;
     overflow: visible;
@@ -228,18 +295,35 @@ li,
 .middle {
     margin: calc(27vh + 2em) 0 0 0;
     padding: 1vmin;
+    /*height: 25vh;*/
     width: 100%;
     max-width: 960px;
     /*background: #bfbf56; !*test*!*/
     background: linear-gradient(
-            to top left, lightsteelblue,
-            rgba(70, 149, 238, 0.7)) no-repeat fixed; /*X% how far gradient (middle) is*/
+            to bottom, #F1F1F1,
+            lightsteelblue) no-repeat fixed; /*X% how far gradient (middle) is*/
     background-size: contain;
-    border: 3px solid #8f3900;
+    border: 2px solid #073763;
     border-radius: 5px;
-    overflow: visible;
-    box-sizing: content-box;
+    box-sizing: border-box;
     /*z-index: 6;*/
+}
+
+.middle.tabs {
+    margin-top: 5vh !important;
+    padding: 1vmin;
+    width: 100%;
+    max-width: 960px;
+    /*background: #bfbf56; !*test*!*/
+    background: linear-gradient(
+            to bottom right, lightsteelblue,
+            #8d8a7e) no-repeat fixed; /*X% how far gradient (middle) is*/
+    background-size: contain;
+    border: 2px solid #073763;
+    border-radius: 5px;
+    /*overflow: visible;*/
+    box-sizing: border-box;
+
 }
 
 /*first 'copy' line:*/
@@ -290,10 +374,10 @@ li,
 }
 
 .pic {
-    margin: 0 0 0 0;
+    /*margin: 0 0 0 0;*/
     height: 100%;
     /*width: 100%;*/
-    border: 2px solid rgba(8, 26, 215, 0.7);
+    border: 2px solid #073763;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -319,7 +403,15 @@ li,
     background: transparent;
     /*height: 100%;*/
     z-index: 7;
+    /*animation: linear 1s;*/
 }
+
+/*.profile.pic:o,*/
+/*.profile.pic: {*/
+/*will-change: scale, opacity;*/
+/*transform: scale(1.1);*/
+/*opacity: .5;*/
+/*}*/
 
 .profile.pic:hover,
 .profile.pic:focus {
@@ -461,7 +553,7 @@ ul,
 /*body border:*/
 #top, #bottom, #left, #right {
     /*border: #b8b23a .75vmin;*/
-    background: #8f3900;
+    background: #073763;
     position: fixed;
     box-sizing: border-box;
     z-index: 4;
