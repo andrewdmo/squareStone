@@ -1,38 +1,45 @@
 package com.squarestone.controller;
 
-import com.squarestone.entities.DotBeta;
-import com.squarestone.entities.GMap;
+import com.squarestone.entities.Mapping;
 import com.squarestone.entities.Purchase;
+import com.squarestone.services.GMap;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-
+@ControllerAdvice
 @Controller
 public class PrimaryController {
 
 //    final private Purchase purchase = new Purchase();
 
-//
+    //
+//    @Autowired
+//    GMap gMap = new GMap();
+
 
     @RequestMapping(value = {"/", "/index", "/home"}, method = RequestMethod.GET)
     public String index(@RequestParam(value = "param", required = false, defaultValue = "null") String param, Model model) {
         return "index";
     }
 
-    @ModelAttribute("purchase")
-    public Purchase purchase() {
-        return new Purchase();
-    }
+//    @ModelAttribute("gMap")
+//    public GMap gMap() {
+//        return new GMap();
+//    }
 
-    @ModelAttribute("dotBeta")
-    public DotBeta dotBeta() {
-        return new DotBeta();
-    }
+    private String gMap = GMap.gMap();
+    private Mapping mapping = new Mapping();
+    private Purchase purchase = new Purchase();
 
-    @ModelAttribute("gMap")
-    public GMap gMap() {
-        return new GMap();
+//    @RequestMapping("/static/**")
+
+
+    @ModelAttribute
+    public void modelAttributes(Model model) {
+        model.addAttribute("gMap", gMap);
+        model.addAttribute("gaddy", mapping);
+        model.addAttribute("purchase", purchase);
     }
 
 
@@ -51,20 +58,26 @@ public class PrimaryController {
         return "purchase";
     }
 
+    @RequestMapping("/googSample")
+    public String googSample() {
+        return "googSample";
+    }
+
     @RequestMapping("/comingSoon")
     public String comingSoon() {
         return "comingSoon";
     }
 
     @GetMapping("/map*")
-    public String mapping(@ModelAttribute DotBeta dotBeta) {
-        System.out.println(dotBeta.getAddy());
+    public String mapping(GMap gMap, Mapping mapping) {
+        System.out.println("gmap: " + gMap);
+        System.out.println("mapping: " + mapping.getDefaultGaddy());
         return "mapping";
     }
 
     @PostMapping("/map*")
-    public String mappingForm(@ModelAttribute DotBeta dotBeta) {
-        System.out.println(dotBeta.getAddy());
+    public String mappingForm(GMap gMap, Mapping mapping) {
+        System.out.println(mapping.getGaddy());
         return "mapping";
     }
 

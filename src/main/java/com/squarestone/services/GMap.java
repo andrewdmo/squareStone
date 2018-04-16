@@ -1,5 +1,6 @@
-package com.squarestone.entities;
+package com.squarestone.services;
 
+import com.squarestone.entities.GotBeta;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicLong;

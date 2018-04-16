@@ -10,9 +10,9 @@ public class GotBeta {
     private String key;
 
     //private-public:
-    GotBeta(long id) {
+    public GotBeta(long id) {
         this.id = id;
-        this.key = "AIzaSyDFkGNUTGT2ZpmlB_yUnHFb9mWM-wxtCRQ";
+        this.key = "AIzaSyAEgsGQb9pHiOX0p8-VpZj46VMwOxg0csU";
     }
 
     public long getId() {
@@ -20,7 +20,7 @@ public class GotBeta {
     }
 
     //private-public:
-    String getKey() {
+    public String getKey() {
         return key;
     }
 
