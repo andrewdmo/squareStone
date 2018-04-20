@@ -1,5 +1,8 @@
 package com.squarestone.entities;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@EntityScan
 public class DotBeta {
 
     //make Atomic:

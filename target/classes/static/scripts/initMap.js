@@ -8,7 +8,7 @@ function initMap() {
         zoom: 13
     });
     var input = document.getElementById('gaddy');
-    // var strictBounds = document.getElementById('strict-bounds-selector');
+    var strictBounds = document.getElementById('strict-bounds-selector');
 
     map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 

@@ -87,7 +87,7 @@
 
     <div class="row middle">
 
-        <form th:action="@{/purchase}" action="#" th:object="${purchase}" method="post">
+        <form th:action="@{/purchase}" action="#" th:object="${purchaseForm}" method="post">
             <table class="twelve columns">
 
                 <!--&lt;!&ndash;HEADER&ndash;&gt;-->
@@ -173,12 +173,13 @@
                 <tr>
                     <td></td>
                     <td><label class="tableLabel">Additional cost sum:</label>
-                        <code class="tableField" th:text="${purchase.addtCostSum}">(addCostTotal)</code>
+                        <code class="tableField" th:text="*{addtCostSum}">(addCostTotal)</code>
                     </td>
                 </tr>
                 <tr>
                     <td><label class="tableLabel">Total purchase costs:</label>
-                        <code class="tableField" style="text-decoration: blink" th:text="${purchase.totalCost}">(TotalCost)</code>
+                        <code class="tableField" style="text-decoration: blink"
+                              th:text="*{costSum}">(TotalCost)</code>
                     </td>
                 </tr>
 

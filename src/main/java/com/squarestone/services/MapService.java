@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Service
-public class GMap {
+public class MapService {
 
     //Id from server session, not client
     private static final AtomicLong counter = new AtomicLong();
@@ -16,5 +16,14 @@ public class GMap {
     public static String gMap() {
         return gotBeta.getKey();
     }
+
+    public static String gLibReq() {
+        return gotBeta.getLibReq();
+    }
+
+    public static String gAutoReq() {
+        return gotBeta.getAutoReq();
+    }
+
 
 }

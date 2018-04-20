@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 @EntityScan
 public class Mapping {
 
-    private String Gaddy;
+    private String gaddy = null;
 
     private String defaultGaddy = "3917+university+drive+durham+nc";
 
@@ -21,12 +21,17 @@ public class Mapping {
 
     private double defaultCoordY = -78.9567109;
 
+
     public String getGaddy() {
-        return Gaddy;
+        if (gaddy != null) {
+            return gaddy;
+        } else return defaultGaddy;
     }
 
+//    do same for Coords...
+
     public void setGaddy(String gaddy) {
-        Gaddy = gaddy;
+        this.gaddy = gaddy;
     }
 
     public String getDefaultGaddy() {

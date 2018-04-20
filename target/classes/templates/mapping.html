@@ -24,20 +24,18 @@
 
     <!--<script type="text/javascript" th:src="@{/scripts/velocity.min.js}" src="/static/scripts/velocity.min.js"></script>-->
     <script th:src="@{/scripts/viewport.js}" src="../static/scripts/viewport.js"></script>
-    <!--<script-->
-    <!--th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${gMap}+'&amp;libraries=places'}"-->
-    <!--&gt;</script>-->
+
     <script async="defer" type="text/javascript"
-            th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${gMap}+'&amp;libraries=places'}"
+            th:src="${mapService.gAutoReq()}"
             src="https://maps.googleapis.com/maps/api/js?key=${gMap}&amp;libraries=places"></script>
+
+    <!--<script type="text/javascript"-->
+    <!--th:src="@{/scripts/initAutocomplete.js}"-->
+    <!--src="../static/scripts/initAutoComplete.js"></script>-->
 
     <script type="text/javascript"
             th:src="@{/scripts/initMap.js}"
             src="../static/scripts/initMap.js"></script>
-
-    <script type="text/javascript"
-            th:src="@{/scripts/initAutocomplete.js}"
-            src="../static/scripts/initAutoComplete.js"></script>
 
 </head>
 
@@ -102,23 +100,22 @@
     <div class="row middle">
 
         <div class="twelve columns">
-            <form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">
-                <table>
-                    <tr>
-                        <th>
-                            <h1 class="tableHeader">
-                                Map a property:
-                            </h1>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td><label class="tableLabel" for="gaddy">Address:</label>
-                            <input class="tableField" type="text" th:field="*{gaddy}" id="gaddy"/>
-                        </td>
-
-                    </tr>
-                </table>
-            </form>
+            <!--<form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">-->
+            <table>
+                <tr>
+                    <th>
+                        <h1 class="tableHeader">
+                            Map a property:
+                        </h1>
+                    </th>
+                </tr>
+                <tr>
+                    <td><label class="tableLabel" for="gaddy">Address:</label>
+                        <input id="gaddy" class="tableField" type="text" placeholder="...enter Address"/>
+                    </td>
+                </tr>
+            </table>
+            <!--</form>-->
 
         </div>
 
@@ -130,83 +127,46 @@
         <!--&lt;!&ndash;src="https://www.google.com/maps/embed/v1/"></iframe>&ndash;&gt;-->
         <!--</div>&lt;!&ndash;map&ndash;&gt;-->
 
-        <div id="map"></div>
+        <div class="twelve columns mapArea">
+            <div id="map"></div>
+        </div>
 
-        <div class="twelve columns map">
+        <!--DRAWN MAP:-->
+        <div class="twelve columns mapArea">
             <!--preload map above, change HEAD link too if needed:-->
-            <iframe name="gMapSV" class="mapcontent" frameborder="0" style="border:0"
-                    th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
-                    src="https://www.google.com/maps/embed/v1/"></iframe>
+            <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                    th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
+                    src="https://www.google.com/maps/embed/v1/">
+
+                <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
+
+            </iframe>
         </div><!--map-->
 
-        <script>function initAutocomplete() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -33.8688, lng: 151.2195},
-                zoom: 13,
-                mapTypeId: 'roadmap'
-            });
+        <!--OVERHEAD SAT:-->
+        <div class="twelve columns mapArea">
+            <!--preload map above, change HEAD link too if needed:-->
+            <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                    th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
+                    src="https://www.google.com/maps/embed/v1/">
 
-            // Create the search box and link it to the UI element.
-            var input = document.getElementById('gaddy');
-            var searchBox = new google.maps.places.SearchBox(input);
-            map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+                <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
 
-            // Bias the SearchBox results towards current map's viewport.
-            map.addListener('bounds_changed', function () {
-                searchBox.setBounds(map.getBounds());
-            });
+            </iframe>
+        </div><!--map-->
 
-            var markers = [];
-            // Listen for the event fired when the user selects a prediction and retrieve
-            // more details for that place.
-            searchBox.addListener('places_changed', function () {
-                var places = searchBox.getPlaces();
+        <!--STREETVIEW:-->
+        <div class="twelve columns mapArea">
+            <!--preload map above, change HEAD link too if needed:-->
+            <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                    th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
+                    src="https://www.google.com/maps/embed/v1/">
 
-                if (places.length == 0) {
-                    return;
-                }
+                <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
 
-                // Clear out the old markers.
-                markers.forEach(function (marker) {
-                    marker.setMap(null);
-                });
-                markers = [];
-
-                // For each place, get the icon, name and location.
-                var bounds = new google.maps.LatLngBounds();
-                places.forEach(function (place) {
-                    if (!place.geometry) {
-                        console.log("Returned place contains no geometry");
-                        return;
-                    }
-                    var icon = {
-                        url: place.icon,
-                        size: new google.maps.Size(71, 71),
-                        origin: new google.maps.Point(0, 0),
-                        anchor: new google.maps.Point(17, 34),
-                        scaledSize: new google.maps.Size(25, 25)
-                    };
-
-                    // Create a marker for each place.
-                    markers.push(new google.maps.Marker({
-                        map: map,
-                        icon: icon,
-                        title: place.name,
-                        position: place.geometry.location
-                    }));
-
-                    if (place.geometry.viewport) {
-                        // Only geocodes have viewport.
-                        bounds.union(place.geometry.viewport);
-                    } else {
-                        bounds.extend(place.geometry.location);
-                    }
-                });
-                map.fitBounds(bounds);
-            });
-        }</script>
-
-    </div>
+            </iframe>
+        </div><!--map-->
+    </div><!--row middle-->
 
 
     <!--&lt;!&ndash;//viewport dims:&ndash;&gt;-->

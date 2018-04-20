@@ -1,6 +1,9 @@
 package com.squarestone.entities;
 
-public class Purchase {
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+@EntityScan
+public class PurchaseForm {
 
     private long appraisal;
 
@@ -29,7 +32,7 @@ public class Purchase {
         return addtCostSum;
     }
 
-    public long getTotalCost() {
+    public long getCostSum() {
         this.costSum = addtCostSum + purchasePrice;
         return costSum;
     }
