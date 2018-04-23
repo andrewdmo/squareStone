@@ -11,9 +11,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class PrimaryController {
 
-    private MapService mapService = new MapService();
-    private Mapping mapping = new Mapping();
-    private PurchaseForm purchaseForm = new PurchaseForm();
+    //Security for individual session??
+    private static MapService mapService = new MapService();
+    private static Mapping mapping = new Mapping();
+    private static PurchaseForm purchaseForm = new PurchaseForm();
 
     @ModelAttribute
     public void modelAttributes(Model model) {
@@ -24,6 +25,7 @@ public class PrimaryController {
 
     @RequestMapping(value = {"/", "/index", "/home"}, method = RequestMethod.GET)
     public String index(@RequestParam(value = "param", required = false, defaultValue = "null") String param, Model model) {
+        System.out.println("gaddy@index:" + mapping.getGaddy());
         return "index";
     }
 
@@ -56,19 +58,20 @@ public class PrimaryController {
         return "comingSoon";
     }
 
-    @GetMapping("/map*")
-    public String mapping() {
+
+    @GetMapping(value = "/mapping")
+    public String mapping(Model model) {
         System.out.println("gLibReq: " + MapService.gLibReq());
         System.out.println("gAutoReq: " + MapService.gAutoReq());
-        System.out.println("gaddy: " + mapping.getGaddy());
+        System.out.println("getGaddy@map: " + mapping.getGaddy());
         System.out.println("defaultGaddy: " + mapping.getDefaultGaddy());
-
         return "mapping";
     }
 
-    @PostMapping("/map*")
-    public String mappingForm(MapService mapService, Mapping mapping) {
-        System.out.println(mapping.getGaddy());
+    @PostMapping(value = "/mapping")
+    public String mapping(@ModelAttribute Mapping mapping) {
+//        mapping.setGaddy(mapping);
+        System.out.println("postGaddy:" + mapping.getGaddy());
         return "mapping";
     }
 

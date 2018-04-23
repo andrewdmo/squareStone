@@ -9,9 +9,9 @@
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
     <!--preload map, change BODY link too if needed:-->
-    <!--<link rel="preload"-->
-    <!--th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${gMap}+'&amp;q='+${offAddy}+'&amp;zoom=13'}"-->
-    <!--href="https://www.google.com/maps/embed/v1/" as="document"/>-->
+    <link rel="preload" as="document"
+          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+ ${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
+          src="https://www.google.com/maps/embed/v1/"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -74,8 +74,8 @@
         <br/>
         <!--CHANGE CURRENT color per page:-->
         <div class="ten columns menuBar">
-            <a th:href="@{/links}" href="links.html">
-                <p class="text menu shadow none">Links
+            <a th:href="@{/mapping}" href="mapping.html">
+                <p class="text menu shadow current">Mapping
                 </p>
             </a>
             <a th:href="@{/contact}" href="contact.html">
@@ -99,23 +99,30 @@
 
     <div class="row middle">
 
-        <div class="twelve columns">
-            <!--<form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">-->
-            <table>
-                <tr>
-                    <th>
-                        <h1 class="tableHeader">
-                            Map a property:
-                        </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td><label class="tableLabel" for="gaddy">Address:</label>
-                        <input id="gaddy" class="tableField" type="text" placeholder="...enter Address"/>
-                    </td>
-                </tr>
-            </table>
-            <!--</form>-->
+        <div class="twelve columns" style="height: 20vh">
+            <form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">
+                <table>
+                    <tr>
+                        <th style="padding: 1vmin">
+                            <h1 class="tableHeader">
+                                Map a property:
+                            </h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td class="tableLabel row">
+                            <label class="tableLabel" for="gaddy">Address:</label>
+                            <input th:field="*{gaddy}" id="gaddy" class="tableField" type="text"
+                                   placeholder="...enter Address"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" class="button" value="Submit"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
 
         </div>
 
@@ -135,7 +142,7 @@
         <div class="twelve columns mapArea">
             <!--preload map above, change HEAD link too if needed:-->
             <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
-                    th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
+                    th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
                     src="https://www.google.com/maps/embed/v1/">
 
                 <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
@@ -147,10 +154,8 @@
         <div class="twelve columns mapArea">
             <!--preload map above, change HEAD link too if needed:-->
             <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
-                    th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
+                    th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;center=35.9657642,-78.9567109&amp;zoom=13&amp;maptype=satellite'}"
                     src="https://www.google.com/maps/embed/v1/">
-
-                <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
 
             </iframe>
         </div><!--map-->

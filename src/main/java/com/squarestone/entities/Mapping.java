@@ -21,12 +21,17 @@ public class Mapping {
 
     private double defaultCoordY = -78.9567109;
 
-
     public String getGaddy() {
-        if (gaddy != null) {
-            return gaddy;
-        } else return defaultGaddy;
+        return gaddy;
     }
+
+//    public String getGaddy() {
+//        if (gaddy != null) {
+//            return gaddy;
+//        } else {
+//            return defaultGaddy;
+//        }
+//    }
 
 //    do same for Coords...
 
