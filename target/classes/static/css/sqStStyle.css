@@ -233,7 +233,10 @@ li,
     overflow: hidden;
     margin: 1vmin;
     padding: 1vmin;
+}
 
+.mapArea.topMarg {
+    /*margin-top: calc(1vh + 3em)*/
 }
 
 .mapcontent {

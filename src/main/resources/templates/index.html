@@ -9,9 +9,10 @@
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
     <!--preload map, change BODY link too if needed:-->
-    <link rel="preload"
-          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${gMap}+'&amp;q='+${offAddy}+'&amp;zoom=13'}"
-          href="https://www.google.com/maps/embed/v1/" as="document"/>
+    <link rel="preload" as="document"
+          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
+          href="https://www.google.com/maps/embed/v1/"/>
+    <!--two more-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -78,6 +79,11 @@
                 <p class="menuText home shadow none">Home
                 </p>
             </a>
+            <div>
+                <code class="menuText" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
+                </code>
+                <code class="menuText" id="gaddy" th:text="'gAddy: ' + *{mapping.gaddy}"></code>
+            </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
             <!--</p>-->
         </div><!--row two menu-->

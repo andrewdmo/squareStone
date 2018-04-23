@@ -25,6 +25,10 @@ public class MapService {
 //        return gotBeta.getEmbedReq();
 //    }
 
+    public static Long gId() {
+        return gotBeta.getId();
+    }
+
     public static String gLibReq() {
         return gotBeta.getLibReq();
     }

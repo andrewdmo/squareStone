@@ -26,11 +26,13 @@ public class PrimaryController {
     @RequestMapping(value = {"/", "/index", "/home"}, method = RequestMethod.GET)
     public String index(@RequestParam(value = "param", required = false, defaultValue = "null") String param, Model model) {
         System.out.println("gaddy@index:" + mapping.getGaddy());
+        System.out.println("mapId: " + mapService.gId());
+
         return "index";
     }
 
     @GetMapping("/purchase")
-    public String purchase() {
+    public String purchase(Model model) {
         System.out.println("totalCost: " + purchaseForm.getCostSum());
         return "purchase";
     }
