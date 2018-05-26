@@ -61,7 +61,7 @@ public class PrimaryController {
     }
 
 
-    @GetMapping(value = "/mapping")
+    @GetMapping(value = "/map*")
     public String mapping(Model model) {
         System.out.println("gLibReq: " + MapService.gLibReq());
         System.out.println("gAutoReq: " + MapService.gAutoReq());
@@ -70,7 +70,7 @@ public class PrimaryController {
         return "mapping";
     }
 
-    @PostMapping(value = "/mapping")
+    @PostMapping(value = "/map*")
     public String mapping(@ModelAttribute Mapping mapping) {
 //        mapping.setGaddy(mapping);
         System.out.println("postGaddy:" + mapping.getGaddy());

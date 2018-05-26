@@ -255,16 +255,16 @@ li,
 }
 
 .menuBar {
-    z-index: 6;
+    z-index: 5;
+    position: absolute;
     opacity: 1.2;
-    height: calc(1vh + 1em);
+    height: calc(2vh + 1rem);
     /*width: 100%;*/
-    max-width: 75%;
+    max-width: 85%;
     padding-right: 1vmin;
-    /*margin: calc(2vh + 1em) 1vmin 0 1vmin;*/
+    margin: 1vmin 0 0 0;
     left: 0;
     bottom: 0;
-    position: absolute;
     background: #8f3900;
     /*background: rgba(45, 45, 124, 0.87);*/
     background-size: cover;
@@ -276,6 +276,9 @@ li,
 }
 
 .menuText {
+    position: relative;
+    opacity: .9;
+    /*width: 100%;*/
     will-change: transform, color; /*keep here*/
     float: right;
     color: #bfbf56;
@@ -283,15 +286,25 @@ li,
     font-style: italic;
     font-size: 1em;
     margin: 0 1vw;
-    /*padding: 1vmin !important;*/
     vertical-align: center;
     text-align: center;
-    z-index: 8;
+    /*z-index: 8;*/
+}
+
+.menuText.dataField {
+    position: absolute;
+    left: 0;
+    /*height: calc(1vh + 1em);*/
+    float: left;
+    font-style: italic;
+    color: #073763;
+    background-color: #bfbca9;
+    border-radius: 3px;
 }
 
 .menuText.home {
-    color: #073763;
-    float: left;
+    color: #073763; /*default but also use current*/
+    /*float: left;*/
 }
 
 .menuText:hover {
@@ -355,6 +368,8 @@ li,
 }
 
 .name {
+    position: absolute;
+    z-index: 6;
     will-change: color, border;
     height: 100%;
     max-height: 16vh; /*keep same as profile??*/
@@ -364,8 +379,6 @@ li,
     max-width: calc(100% - 20vh); /*leave*/
     margin-top: 1vmin;
     padding: 1vmin 1vmin 1vmin 2vmin; /*same as text & name*/
-    position: absolute;
-    z-index: 7;
     text-decoration: none;
 }
 
@@ -391,26 +404,26 @@ li,
 }
 
 .profile {
+    position: absolute;
     margin: 1vmin 0 0 0;
-    padding: 1vmin; /*same as text & name*/
+    /*padding: 1vmin; !*same as text & name*!*/
     height: calc(20vh - (1vh + 2em)) !important; /*keep same as name*/
     /*width: 16vh !important;*/
-    position: absolute;
     border-radius: 5px;
     /*overflow: hidden;*/
     /*background-color: #8e8a2d;*/
 }
 
 .profile.pic {
+    position: relative;
+    z-index: 5;
     will-change: scale, opacity;
     margin: 0;
     padding: 0;
     /*height: 100%;*/
     /*width: 100%;*/
-    position: relative;
     background: transparent;
     /*height: 100%;*/
-    z-index: 5;
     /*animation: linear 1s;*/
 }
 
@@ -512,7 +525,8 @@ tr:nth-child(even) {
 }
 
 .tableHeader {
-    margin: 0;
+    margin: 1vmin;
+    padding: 0;
     text-align: center;
 }
 
@@ -525,7 +539,7 @@ tr:nth-child(even) {
 .tableLabel.row {
     padding: 1vmax;
     text-align: left;
-
+    background-color: rgba(70, 149, 238, 0.7);
 }
 
 .tableLegend {
@@ -545,7 +559,7 @@ tr:nth-child(even) {
     margin: 1vmax 1vmax 1vmax 0; /*KEEP*/
     position: fixed;
     /*border: .5vmin solid #8f3900;*/
-    z-index: 5;
+    z-index: 9;
     background: transparent;
     /*overflow: visible;*/
     opacity: .85;
@@ -571,7 +585,7 @@ ul,
     background: #073763;
     position: fixed;
     box-sizing: border-box;
-    z-index: 4;
+    z-index: 9; /*keep high*/
 }
 
 #left, #right {

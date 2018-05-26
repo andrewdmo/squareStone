@@ -3,27 +3,27 @@
 // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var autoMap = new google.maps.Map(document.getElementById('autoMap'), {
         center: {lat: -33.8688, lng: 151.2195},
         zoom: 13
     });
     var input = document.getElementById('gaddy');
     var strictBounds = document.getElementById('strict-bounds-selector');
 
-    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+    autoMap.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
     var autocomplete = new google.maps.places.Autocomplete(input);
 
     // Bind the map's bounds (viewport) property to the autocomplete object,
     // so that the autocomplete requests use the current map bounds for the
     // bounds option in the request.
-    autocomplete.bindTo('bounds', map);
+    autocomplete.bindTo('bounds', autoMap);
 
     var infowindow = new google.maps.InfoWindow();
     var infowindowContent = document.getElementById('infowindow-content');
     infowindow.setContent(infowindowContent);
     var marker = new google.maps.Marker({
-        map: map,
+        autoMap: autoMap,
         anchorPoint: new google.maps.Point(0, -29)
     });
 
@@ -40,10 +40,10 @@ function initMap() {
 
         // If the place has a geometry, then present it on a map.
         if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
+            autoMap.fitBounds(place.geometry.viewport);
         } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(17);  // Why 17? Because it looks good.
+            autoMap.setCenter(place.geometry.location);
+            autoMap.setZoom(17);  // Why 17? Because it looks good.
         }
         marker.setPosition(place.geometry.location);
         marker.setVisible(true);
@@ -60,7 +60,7 @@ function initMap() {
         infowindowContent.children['place-icon'].src = place.icon;
         infowindowContent.children['place-name'].textContent = place.name;
         infowindowContent.children['place-address'].textContent = address;
-        infowindow.open(map, marker);
+        infowindow.open(autoMap, marker);
     });
 
     // Sets a listener on a radio button to change the filter type on Places

@@ -27,16 +27,17 @@
     <script th:src="@{/scripts/viewport.js}" src="../static/scripts/viewport.js"></script>
 
     <script async="defer" type="text/javascript"
-            th:src="${mapService.gAutoReq()}"
+            th:src="${mapService.gLibReq()}"
             src="https://maps.googleapis.com/maps/api/js?key=${gMap}&amp;libraries=places"></script>
 
-    <!--<script type="text/javascript"-->
-    <!--th:src="@{/scripts/initAutocomplete.js}"-->
-    <!--src="../static/scripts/initAutoComplete.js"></script>-->
-
     <script type="text/javascript"
-            th:src="@{/scripts/initMap.js}"
-            src="../static/scripts/initMap.js"></script>
+    th:src="@{/scripts/initAutoComplete.js}"
+    src="../static/scripts/initAutoComplete.js"></script>
+
+    <!--MOVED TO BODY:-->
+    <!--<script type="text/javascript"-->
+    <!--th:src="@{/scripts/initMap.js}"-->
+    <!--src="../static/scripts/initMap.js"></script>-->
 
 </head>
 
@@ -94,7 +95,7 @@
             <div>
                 <code class="menuText" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
                 </code>
-                <code class="menuText" id="gaddy" th:text="'gAddy: ' + *{mapping.gaddy}"></code>
+                <code class="menuText" id="gaddyTop" th:text="'gAddy: ' + *{mapping.gaddy}"></code>
             </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
             <!--</p>-->
@@ -109,7 +110,7 @@
             <form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">
                 <table>
                     <tr>
-                        <th style="padding: 1vmin">
+                        <th class="tableHeader">
                             <h1 class="tableHeader">
                                 Map a property:
                             </h1>
@@ -118,7 +119,7 @@
                     <tr>
                         <td class="tableLabel row">
                             <label class="tableLabel" for="gaddy">Address:</label>
-                            <input th:field="*{gaddy}" id="gaddy" class="tableField" type="text"
+                            <input type="text" th:field="*{gaddy}" id="gaddy" class="tableField"
                                    placeholder="...enter Address"/>
                         </td>
                     </tr>
@@ -133,12 +134,18 @@
         </div>
 
 
-        <!--<div class="twelve columns map" id="map">-->
-        <!--&lt;!&ndash;preload map above, change HEAD link too if needed:&ndash;&gt;-->
-        <!--&lt;!&ndash;<iframe name="gMap" class="mapcontent" frameborder="0" style="border:0"&ndash;&gt;-->
-        <!--&lt;!&ndash;th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${gMap}+'&amp;q='+${mapping.defaultCoord}+'&amp;zoom=13'}"&ndash;&gt;-->
-        <!--&lt;!&ndash;src="https://www.google.com/maps/embed/v1/"></iframe>&ndash;&gt;-->
-        <!--</div>&lt;!&ndash;map&ndash;&gt;-->
+        <div id="autoMap">
+        </div><!--map-->
+
+        <!--<script type="text/javascript"-->
+        <!--th:src="@{/scripts/initMap.js}"-->
+        <!--src="../static/scripts/initMap.js"></script>-->
+
+
+        <!--preload map above, change HEAD link too if needed:-->
+        <!--<iframe name="gMap" class="mapcontent" frameborder="0" style="border:0"-->
+        <!--th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${gMap}+'&amp;q='+${mapping.defaultCoord}+'&amp;zoom=13'}"-->
+        <!--src="https://www.google.com/maps/embed/v1/"></iframe>-->
 
 
         <!--TEST:-->
