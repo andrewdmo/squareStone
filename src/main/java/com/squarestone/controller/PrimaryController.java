@@ -2,6 +2,7 @@ package com.squarestone.controller;
 
 import com.squarestone.entities.Mapping;
 import com.squarestone.entities.PurchaseForm;
+import com.squarestone.entities.SpaceForm;
 import com.squarestone.services.MapService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -39,11 +40,24 @@ public class PrimaryController {
 
     @PostMapping("/purchase")
     public String purchaseForm(PurchaseForm purchaseForm) {
-        System.out.println("appraisal:" + purchaseForm.getAppraisal());
-        System.out.println("addtCostSum:" + purchaseForm.getAddtCostSum());
+//        System.out.println("appraisal:" + purchaseForm.getAppraisal());
+//        System.out.println("addtCostSum:" + purchaseForm.getAddtCostSum());
         System.out.println("totalCost: " + purchaseForm.getCostSum());
         return "purchase";
     }
+
+    @GetMapping("/spaceDimensions")
+    public String spaceDimensions(Model model) {
+        System.out.println("spaceDims");
+        return "spaceDimensions";
+    }
+
+    @PostMapping("/spaceDimensions")
+    public String spaceDimensionsForm(SpaceForm spaceForm) {
+        System.out.println("spaceDimsForm");
+        return "spaceDimensions";
+    }
+
 
     @RequestMapping("/googSample")
     public String googSample() {

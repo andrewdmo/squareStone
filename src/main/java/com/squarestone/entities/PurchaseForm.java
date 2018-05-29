@@ -25,7 +25,7 @@ public class PurchaseForm {
 
     private long purchasePrice;
 
-    private long costSum = addtCostSum + purchasePrice;
+    private long purchaseTotal = addtCostSum + purchasePrice;
 
     public long getAddtCostSum() {
         addtCostSum = appraisal + roofInsp + ph1EnvAssess + ph2EnvAssess + attyFee + survey + miscCost1 + miscCost2;
@@ -33,8 +33,8 @@ public class PurchaseForm {
     }
 
     public long getCostSum() {
-        this.costSum = addtCostSum + purchasePrice;
-        return costSum;
+        this.purchaseTotal = addtCostSum + purchasePrice;
+        return purchaseTotal;
     }
 
     public long getAppraisal() {
