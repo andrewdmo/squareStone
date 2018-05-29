@@ -49,8 +49,7 @@
                 <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
                      class="profile pic shade"/>
             </a>
-        </div><!--PROFILE-->
-
+        </div>
 
         <div class="eight columns name">
             <a th:href="@{/index}" href="index.html">
@@ -63,23 +62,13 @@
         </div><!--NAME-->
         <br/>
 
-
         <!--CHANGE CURRENT color per page:-->
-
-
         <div class="ten columns menuBar">
 
-
-            <p class="menuText dataField" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
-            </p>
-
-
-
             <a th:href="@{/home}" href="index.html" rel="#home">
-                <p class="menuText home shadow current">Home
+                <p class="menuText home shadow none">Home
                 </p>
             </a>
-
 
 
             <a th:href="@{/mapping}" href="mapping.html">
@@ -95,7 +84,11 @@
             </a>
 
 
-            <!--<p class="menuText field" id="gaddy" th:text="'gAddy: ' + *{mapping.gaddy}"></p>-->
+            <div class="menuBarFieldBack">
+                <p class="menuText dataField" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
+                </p>
+                <!--<p class="menuText dataField" id="gaddy" th:text="'gAddy: ' + *{mapping.gaddy}"></p>-->
+            </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
             <!--</p>-->
         </div><!--row two menuBar-->
@@ -106,46 +99,50 @@
 
     <div class="row middle">
 
-        <div class="six columns main text">
-            <p>
-                Behold the world's finest Analysis Engine for Commercial Properties.
-            </p>
-            <p>
-                The oft-dreamt tool of architects, builders, and investors alike is here
-                [in
-                beta].
-            </p>
-        </div>
-        <br/>
-        <div class="six columns main back">
-            <a th:href="@{/about}" href="about.html">
-                <img class="headShot pic shade" th:src="@{img/sqStSheet.jpg}"
-                     src="../static/img/sqStSheet.jpg"/>
-            </a>
-        </div>
+        <form th:action="@{/purchase}" action="#" th:object="${spaceForm}" method="post">
+            <table>
+                <thead>
+
+                <tr>
+                    <th>
+                        <h1 class="tableHeader">Space Dimensions</h1>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th>
+                        <h2 class="tableHeader h2">Total Sq Footage</h2>
+                    </th>
+                </tr>
+                </thead>
+
+
+                <!--ROW 1-->
+                <colgroup span="2"></colgroup>
+                <tbody>
+                <tr>
+                    <td colspan="1"><label class="tableLabel" for="tenantSpace1">tenantSpace1</label>
+                        <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
+                               th:value="0"
+                               value="0" autofocus="autofocus"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="1"><label class="tableLabel" for="tenantSpace2">tenantSpace2</label>
+                        <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
+                               th:value="0" value="0"/>
+                    </td>
+                </tr>
+
+                </tbody>
+
+
+            </table><!--six columns R-->
+        </form>
+
     </div><!--row middle-->
 
 
-    <!--BUTTONS/TABS:-->
-    <div class="row middle tabs">
-
-
-
-    </div><!--row midButton-->
-
-
-    <!--&lt;!&ndash;//viewport dims:&ndash;&gt;-->
-    <!--<div class="row testBar">-->
-    <!--<div class="three columns">&lt;!&ndash;at bottom left/right:&ndash;&gt;-->
-    <!--//live .js viewport size:-->
-    <!--<div class="test vw">vw:</div>-->
-    <!--<div class="test vmin">vmin:</div>-->
-    <!--<div class="test vh">vh:</div>-->
-    <!--<div class="test vmax">vmax:</div>-->
-    <!--</div>-->
-    <!--</div>&lt;!&ndash;row testBar&ndash;&gt;-->
-
 </div><!--container-->
-
 </body>
 </html>

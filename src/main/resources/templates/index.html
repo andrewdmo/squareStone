@@ -67,19 +67,17 @@
         <!--CHANGE CURRENT color per page:-->
 
 
-        <div class="ten columns menuBar">
+        <div class="nine columns menuBar">
 
 
-            <p class="menuText dataField" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
+            <p class="menuText dataField" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">costSum Total
             </p>
-
 
 
             <a th:href="@{/home}" href="index.html" rel="#home">
                 <p class="menuText home shadow current">Home
                 </p>
             </a>
-
 
 
             <a th:href="@{/mapping}" href="mapping.html">
@@ -152,7 +150,7 @@
         <div class="row 2">
 
             <div class="six columns">
-                <a th:href="@{/spaceDimensions}" href="spaceDimensions.html">
+                <a th:href="@{/spacedims}" href="spacedims.html">
                     <button>
                         Space Dimensions
                     </button>

@@ -59,10 +59,17 @@
                 <h2 class="text shadow link u-pull-left">Commercial Property Analysis
                 </h2></a>
 
-        </div>
+        </div><!--NAME-->
         <br/>
         <!--CHANGE CURRENT color per page:-->
         <div class="ten columns menuBar">
+
+            <a th:href="@{/home}" href="index.html" rel="#home">
+                <p class="menuText home shadow none">Home
+                </p>
+            </a>
+
+
             <a th:href="@{/mapping}" href="mapping.html">
                 <p class="menuText shadow none">Mapping
                 </p>
@@ -75,10 +82,7 @@
                 </p>
             </a>
 
-            <a th:href="@{/home}" href="index.html" rel="#home">
-                <p class="menuText home shadow none">Home
-                </p>
-            </a>
+
             <div>
                 <code class="menuText" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
                 </code>
@@ -86,9 +90,10 @@
             </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
             <!--</p>-->
-        </div><!--row two menu-->
+        </div><!--row two menuBar-->
 
-    </div><!--row top-->
+
+    </div><!--row TOP--><!--row TOP--><!--row TOP--><!--row TOP-->
 
 
     <div class="row middle">
@@ -117,7 +122,7 @@
                 <!--ROW 1-->
                 <tr>
                     <td><label class="tableLabel" for="purchasePrice">Purchase Price:</label>
-                        <input class="tableField" type="text" th:field="*{purchasePrice}" id="purchasePrice" value="0"/>
+                        <input class="tableField" type="text" th:field="*{purchasePrice}" id="purchasePrice" value="0" autofocus="autofocus"/>
                     </td>
 
                     <td><label class="tableLabel" for="appraisal"

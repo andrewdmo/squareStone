@@ -10,18 +10,19 @@ public class SpaceForm {
 //simple FOR loop should work
 
 
-    private long tenantSpace1;
-    private long tenantSpace2;
-    private long tenantSpace3;
-    private long tenantSpace4;
+    private long tenantSpace1 = 0;
+    private long tenantSpace2 = 2;
+    private long tenantSpace3 = 3;
+    private long tenantSpace4 = 4;
 
-    private long commonSpace1;
-    private long commonSpace2;
+    private long commonSpace1 = 1;
+    private long commonSpace2 = 1;
 
     private long totalSqFt = tenantSpace1 + tenantSpace2 + tenantSpace3 + tenantSpace4 + commonSpace1 + commonSpace2;
     private long tenantSqFt = tenantSpace1 + tenantSpace2 + tenantSpace3 + tenantSpace4;
     private long commonSqFt = commonSpace1 + commonSpace2;
 
+    //throw divZero Exception in different method OR have values above
     private long tenantPercentOfTotal1 = (tenantSpace1 / totalSqFt);
     private long tenantPercentOfTotal2 = (tenantSpace2 / totalSqFt);
     private long tenantPercentOfTotal3 = (tenantSpace3 / totalSqFt);

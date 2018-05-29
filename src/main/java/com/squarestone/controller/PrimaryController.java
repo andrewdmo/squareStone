@@ -16,18 +16,20 @@ public class PrimaryController {
     private static MapService mapService = new MapService();
     private static Mapping mapping = new Mapping();
     private static PurchaseForm purchaseForm = new PurchaseForm();
+    private static SpaceForm spaceForm = new SpaceForm();
 
     @ModelAttribute
     public void modelAttributes(Model model) {
         model.addAttribute("mapService", mapService);
         model.addAttribute("mapping", mapping);
         model.addAttribute("purchaseForm", purchaseForm);
+        model.addAttribute("spaceForm", spaceForm);
     }
 
     @RequestMapping(value = {"/", "/index", "/home"}, method = RequestMethod.GET)
     public String index(@RequestParam(value = "param", required = false, defaultValue = "null") String param, Model model) {
         System.out.println("gaddy@index:" + mapping.getGaddy());
-        System.out.println("mapId: " + mapService.gId());
+        System.out.println("mapId: " + MapService.gId());
 
         return "index";
     }
@@ -46,16 +48,16 @@ public class PrimaryController {
         return "purchase";
     }
 
-    @GetMapping("/spaceDimensions")
+    @GetMapping("/spacedims")
     public String spaceDimensions(Model model) {
-        System.out.println("spaceDims");
-        return "spaceDimensions";
+        System.out.println("spacedims");
+        return "spacedims";
     }
 
-    @PostMapping("/spaceDimensions")
+    @PostMapping("/spacedims")
     public String spaceDimensionsForm(SpaceForm spaceForm) {
         System.out.println("spaceDimsForm");
-        return "spaceDimensions";
+        return "spacedims";
     }
 
 
