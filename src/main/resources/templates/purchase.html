@@ -99,7 +99,7 @@
     <div class="row middle">
 
         <form th:action="@{/purchase}" action="#" th:object="${purchaseForm}" method="post">
-            <table class="twelve columns">
+            <table class="twelve columns" title="Purchase Costs">
 
                 <!--&lt;!&ndash;HEADER&ndash;&gt;-->
                 <!--<tr>-->
@@ -108,6 +108,7 @@
                 <!--</tr>-->
 
                 <!--HEADER-->
+                <thead>
                 <tr>
 
                     <th>
@@ -118,11 +119,14 @@
                         <h2 class="tableHeader h2">Costs associated with purchase</h2>
                     </th>
                 </tr>
+                </thead>
+                <tbody>
 
                 <!--ROW 1-->
                 <tr>
                     <td><label class="tableLabel" for="purchasePrice">Purchase Price:</label>
-                        <input class="tableField" type="text" th:field="*{purchasePrice}" id="purchasePrice" value="0" autofocus="autofocus"/>
+                        <input class="tableField" type="text" th:field="*{purchasePrice}" id="purchasePrice" value="0"
+                               autofocus="autofocus"/>
                     </td>
 
                     <td><label class="tableLabel" for="appraisal"
@@ -198,6 +202,7 @@
                 <tr>
                     <td><input class="button" type="submit" value="Submit"/></td>
                 </tr>
+                </tbody>
 
             </table><!--six columns R-->
         </form>

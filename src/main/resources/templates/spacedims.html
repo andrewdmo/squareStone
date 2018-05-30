@@ -99,46 +99,78 @@
 
     <div class="row middle">
 
-        <form th:action="@{/purchase}" action="#" th:object="${spaceForm}" method="post">
-            <table>
+        <form th:action="@{/spacedims}" action="#" th:object="${spaceForm}" method="post">
+            <table class="twelve columns" title="Space Dimensions">
                 <thead>
 
                 <tr>
-                    <th>
+                    <th colspan="2">
                         <h1 class="tableHeader">Space Dimensions</h1>
                     </th>
                 </tr>
 
-                <tr>
-                    <th>
-                        <h2 class="tableHeader h2">Total Sq Footage</h2>
-                    </th>
-                </tr>
                 </thead>
 
 
                 <!--ROW 1-->
-                <colgroup span="2"></colgroup>
+
                 <tbody>
                 <tr>
-                    <td colspan="1"><label class="tableLabel" for="tenantSpace1">tenantSpace1</label>
-                        <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
-                               th:value="0"
-                               value="0" autofocus="autofocus"/>
-                    </td>
+                    <td colspan="1">
+                        <form th:action="@{/purchase}" action="#" th:object="${spaceForm}" method="post">
+                            <fieldset name="totalSqFt">
+                                <legend class="tableHeader h2">Total Sq Footage</legend>
+
+                                <!--for loop later:-->
+                                <label class="tableLabel" for="tenantSpace1">tenantSpace1</label>
+                                <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
+                                       th:value="0"
+                                       value="0" autofocus="autofocus"/>
+
+                                <label class="tableLabel" for="tenantSpace2">tenantSpace2</label>
+                                <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
+                                       th:value="0"
+                                       value="0"/>
+
+                                <label class="tableLabel" for="tenantSpace3">tenantSpace1</label>
+                                <input class="tableField" type="text" th:field="*{tenantSpace3}" id="tenantSpace3"
+                                       th:value="0"
+                                       value="0"/>
+
+                                <label class="tableLabel" for="tenantSpace4">tenantSpace1</label>
+                                <input class="tableField" type="text" th:field="*{tenantSpace4}" id="tenantSpace4"
+                                       th:value="0"
+                                       value="0"/>
+
+                                <label class="tableLabel" for="commonSpace1">commonSpace1</label>
+                                <input class="tableField" type="text" th:field="*{tenantSpace1}" id="commonSpace1"
+                                       th:value="0"
+                                       value="0"/>
+
+                                <label class="tableLabel" for="commonSpace2">commonSpace2</label>
+                                <input class="tableField" type="text" th:field="*{tenantSpace1}" id="commonSpace2"
+                                       th:value="0"
+                                       value="0"/>
+
+
+                            </fieldset>
+                        </form>
+                    </td><!--1 column-->
+                    <td></td>
                 </tr>
                 <tr>
-                    <td colspan="1"><label class="tableLabel" for="tenantSpace2">tenantSpace2</label>
-                        <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
-                               th:value="0" value="0"/>
+                    <td>
                     </td>
+                    <td></td>
+
                 </tr>
 
+
                 </tbody>
-
-
             </table><!--six columns R-->
+
         </form>
+
 
     </div><!--row middle-->
 
