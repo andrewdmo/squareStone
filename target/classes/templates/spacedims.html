@@ -99,7 +99,7 @@
 
     <div class="row middle">
 
-        <form th:action="@{/spacedims}" action="#" th:object="${spaceForm}" method="post">
+        <form th:action="@{/spacedims}" action="#" th:object="${spaceForm}" id="spaceForm" method="post">
             <table class="twelve columns" title="Space Dimensions">
                 <thead>
 
@@ -117,54 +117,68 @@
                 <tbody>
                 <tr>
                     <td>
-                        <fieldset name="totalSqFt">
+                        <fieldset name="totalSqFt" form="spaceForm">
                             <legend class="tableHeader h2">Total Sq Footage</legend>
-
-                            <!--for loop later:-->
-                            <fieldset>
-                                <legend class="tableHeader h3">Tenant Space</legend>
-
-                                <label class="tableLabel" for="tenantSpace1">Unit 1</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
-                                       value="0" autofocus="autofocus"/>
-
-                                <label class="tableLabel" for="tenantSpace2">Unit 2</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="tenantSpace3">Unit 3</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace3}" id="tenantSpace3"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="tenantSpace4">Unit 4</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace4}" id="tenantSpace4"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="tenantSqFt">Total Tenant Sq Ft</label>
-                                <code class="tableField" th:text="*{tenantSqFt}" id="tenantSqFt">tenantTotalSqFt</code>
-
-                            </fieldset>
-
-                            <fieldset>
-                                <legend class="tableHeader h3">Common Space</legend>
-                                <label class="tableLabel" for="commonSpace1">Common 1</label>
-                                <input class="tableField" type="text" th:field="*{commonSpace1}" id="commonSpace1"
-                                       th:value="0"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="commonSpace2">Common 2</label>
-                                <input class="tableField" type="text" th:field="*{commonSpace2}" id="commonSpace2"
-                                       th:value="0"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="commonSqFt">Total Common Sq Ft</label>
-                                <code class="tableField" th:text="*{commonSqFt}" id="commonSqFt">commonTotalSqFt</code>
-
-                            </fieldset>
-                        </fieldset>
+                        </fieldset><!--totalSqFt-->
                     </td>
+
+                    <td></td>
+                </tr>
+
+                <tr>
                     <td>
-                        <fieldset>
+                        <!--for loop later:-->
+                        <fieldset name="tenantSqFt">
+                            <legend class="tableHeader h3">Tenant Space</legend>
+
+                            <label class="tableLabel" for="tenantSpace1">Unit 1</label>
+                            <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
+                                   value="0" autofocus="autofocus"/>
+
+                            <label class="tableLabel" for="tenantSpace2">Unit 2</label>
+                            <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
+                                   value="0"/>
+
+                            <label class="tableLabel" for="tenantSpace3">Unit 3</label>
+                            <input class="tableField" type="text" th:field="*{tenantSpace3}" id="tenantSpace3"
+                                   value="0"/>
+
+                            <label class="tableLabel" for="tenantSpace4">Unit 4</label>
+                            <input class="tableField" type="text" th:field="*{tenantSpace4}" id="tenantSpace4"
+                                   value="0"/>
+
+                            <label class="tableLabel" for="tenantSqFt">Total Tenant Sq Ft</label>
+                            <code class="tableField" th:text="*{tenantSqFt}" id="tenantSqFt">tenantTotalSqFt</code>
+
+                        </fieldset><!--tenantSqFt-->
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <fieldset name="commonSqFt">
+                            <legend class="tableHeader h3">Common Space</legend>
+                            <label class="tableLabel" for="commonSpace1">Common 1</label>
+                            <input class="tableField" type="text" th:field="*{commonSpace1}" id="commonSpace1"
+                                   th:value="0"
+                                   value="0"/>
+
+                            <label class="tableLabel" for="commonSpace2">Common 2</label>
+                            <input class="tableField" type="text" th:field="*{commonSpace2}" id="commonSpace2"
+                                   th:value="0"
+                                   value="0"/>
+
+                            <label class="tableLabel" for="commonSqFt">Total Common Sq Ft</label>
+                            <code class="tableField" th:text="*{commonSqFt}" id="commonSqFt">commonTotalSqFt</code>
+
+                        </fieldset><!--commonSqFt-->
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset name="percentOfTotal">
                             <legend class="tableHeader h3">% of Total Sq Ft</legend>
                             <fieldset>
 
@@ -201,8 +215,9 @@
                                       id="commonPercentofTotal2">common%total</code>
 
                             </fieldset>
-                        </fieldset>
-                        <fieldset>
+                        </fieldset><!--percentOfTotal-->
+
+                        <fieldset name="tenantOnlyPercent">
                             <legend class="tableHeader h3">% of Tenant-Only Sq Ft</legend>
 
                             <label class="tablelabel" for="tenantOnlyPercent1">Unit 1:</label>
@@ -222,7 +237,7 @@
                                   id="tenantOnlyPercent4">tenantOnly%4</code>
 
 
-                        </fieldset>
+                        </fieldset><!--tenantOnlyPercent-->
                     </td>
                 </tr><!--1st row-->
 

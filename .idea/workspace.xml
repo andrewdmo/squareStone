@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e40d45d9-b015-4492-97de-f7217c7ce821" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/purchase.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/purchase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/squarestone/controller/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/squarestone/controller/PrimaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/squarestone/entities/SpaceForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/squarestone/entities/SpaceForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/spacedims.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/spacedims.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/squareStone-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/squareStone-1.1.2.jar.original" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,8 +58,8 @@
           <file leaf-file-name="spacedims.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/spacedims.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-88">
-                  <caret line="191" column="38" selection-start-line="191" selection-start-column="38" selection-end-line="191" selection-end-column="38" />
+                <state relative-caret-position="130">
+                  <caret line="178" column="20" lean-forward="true" selection-start-line="178" selection-start-column="20" selection-end-line="178" selection-end-column="20" />
                   <folding>
                     <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -76,8 +74,8 @@
           <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+                <state relative-caret-position="266">
+                  <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -115,8 +113,8 @@
           <file leaf-file-name="SpaceForm.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2855">
-                  <caret line="236" column="5" selection-start-line="236" selection-start-column="5" selection-end-line="236" selection-end-column="5" />
+                <state relative-caret-position="187">
+                  <caret line="28" selection-start-line="28" selection-end-line="28" />
                   <folding>
                     <element signature="e#5436#5437#0" expanded="true" />
                     <element signature="e#5469#5470#0" expanded="true" />
@@ -257,7 +255,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/initAutoComplete.js" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mapping.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/links.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/spaceForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/PurchaseForm.java" />
@@ -268,6 +265,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/purchase.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" />
       </list>
     </option>
@@ -374,15 +372,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="squarestone" type="462c0819:PsiDirectoryNode" />
               <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="squareStone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="squareStone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="squarestone" type="462c0819:PsiDirectoryNode" />
-              <item name="practice.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="squareStone" type="b2602c69:ProjectViewProjectNode" />
@@ -632,20 +621,21 @@
       <workItem from="1527769038539" duration="2756000" />
       <workItem from="1527987726073" duration="1142000" />
       <workItem from="1528042373179" duration="4953000" />
-      <workItem from="1528063437930" duration="4775000" />
+      <workItem from="1528063437930" duration="6408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177645000" />
+    <option name="totallyTimeSpent" value="179278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Amazon EC2" order="15" sideWeight="0.2732475" weight="0.35102534" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.7153076" side_tool="true" weight="0.39150944" />
-      <window_info active="true" anchor="right" x="1059" y="211" width="337" height="295" id="Maven Projects" order="6" visible="true" weight="0.050694443" />
+      <window_info anchor="right" x="1059" y="211" width="337" height="295" id="Maven Projects" order="6" visible="true" weight="0.050694443" />
       <window_info anchor="bottom" id="Database Changes" order="22" show_stripe_button="false" />
       <window_info anchor="right" id="Mongo Explorer" order="18" />
       <window_info anchor="right" id="Designer" order="7" />
@@ -662,7 +652,7 @@
       <window_info id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3293124" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49427754" weight="0.3256936" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6020833" side_tool="true" visible="true" weight="0.31132075" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6020833" side_tool="true" weight="0.31132075" />
       <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.55722463" weight="0.2249093" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45207438" weight="0.32810616" />
       <window_info anchor="right" auto_hide="true" id="Jenkins" internal_type="SLIDING" order="15" show_stripe_button="false" type="SLIDING" weight="0.32403433" />
@@ -1020,13 +1010,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="88" column="21" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/links.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1128,10 +1111,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2855">
-          <caret line="236" column="5" selection-start-line="236" selection-start-column="5" selection-end-line="236" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
           <folding>
             <element signature="e#5436#5437#0" expanded="true" />
             <element signature="e#5469#5470#0" expanded="true" />
@@ -1155,8 +1145,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/spacedims.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88">
-          <caret line="191" column="38" selection-start-line="191" selection-start-column="38" selection-end-line="191" selection-end-column="38" />
+        <state relative-caret-position="130">
+          <caret line="178" column="20" lean-forward="true" selection-start-line="178" selection-start-column="20" selection-end-line="178" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#form#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
