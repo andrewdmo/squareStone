@@ -1,46 +1,62 @@
 package com.squarestone.entities;
 
-import org.springframework.stereotype.Component;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-@Component
+@EntityScan
 public class SpaceForm {
 
 
     //simple FOR loop should work for unlimited variables:
-//simple FOR loop should work
 
 
     private long tenantSpace1 = 0;
-    private long tenantSpace2 = 2;
-    private long tenantSpace3 = 3;
-    private long tenantSpace4 = 4;
+    private long tenantSpace2 = 0;
+    private long tenantSpace3 = 0;
+    private long tenantSpace4 = 0;
 
-    private long commonSpace1 = 1;
-    private long commonSpace2 = 1;
+    private long commonSpace1 = 0;
+    private long commonSpace2 = 0;
 
-    private long totalSqFt = tenantSpace1 + tenantSpace2 + tenantSpace3 + tenantSpace4 + commonSpace1 + commonSpace2;
-    private long tenantSqFt = tenantSpace1 + tenantSpace2 + tenantSpace3 + tenantSpace4;
-    private long commonSqFt = commonSpace1 + commonSpace2;
+    private long totalSqFt;
+    private long tenantSqFt;
+    private long commonSqFt;
 
     //throw divZero Exception in different method OR have values above
-    private long tenantPercentOfTotal1 = (tenantSpace1 / totalSqFt);
-    private long tenantPercentOfTotal2 = (tenantSpace2 / totalSqFt);
-    private long tenantPercentOfTotal3 = (tenantSpace3 / totalSqFt);
-    private long tenantPercentOfTotal4 = (tenantSpace4 / totalSqFt);
+    private long tenantPercentOfTotal1;
+    private long tenantPercentOfTotal2;
+    private long tenantPercentOfTotal3;
+    private long tenantPercentOfTotal4;
 
-    private long commonPercentofTotal1 = (tenantSpace1 / totalSqFt);
-    private long commonPercentofTotal2 = (tenantSpace2 / totalSqFt);
+
+    private long commonPercentofTotal1;
+    private long commonPercentofTotal2;
 
     //exception if not 100?
     private long percentSum = tenantPercentOfTotal1 + tenantPercentOfTotal2 + tenantPercentOfTotal3 + tenantPercentOfTotal4;
 
 
-    private long tenantOnlyPercent1 = (tenantSpace1 / tenantSqFt);
-    private long tenantOnlyPercent2 = (tenantSpace2 / tenantSqFt);
-    private long tenantOnlyPercent3 = (tenantSpace3 / tenantSqFt);
-    private long tenantOnlyPercent4 = (tenantSpace4 / tenantSqFt);
+    private long zeroPercent(long tenantSpace, long totalSpace) throws ArithmeticException {
+        try {
+            long z = (tenantSpace * 100L) / totalSpace;
+            System.out.println(" tenantSpace" + tenantSpace + " totalSpace" + totalSpace + " z" + z);
+            return z;
+
+        } catch (ArithmeticException e) {
+            System.out.println(e.toString());
+            return 0;
+        }
+//        if (totalSpace == 0) throw new java.lang.ArithmeticException("/ by zero dammit");
+
+    }
+
+    private long tenantOnlyPercent1;
+    private long tenantOnlyPercent2 = zeroPercent(tenantSpace2, tenantSqFt);
+    private long tenantOnlyPercent3 = zeroPercent(tenantSpace3, tenantSqFt);
+    private long tenantOnlyPercent4 = zeroPercent(tenantSpace4, tenantSqFt);
+
 
     private Long tenantOnlyPercentSum = tenantOnlyPercent1 + tenantOnlyPercent2 + tenantOnlyPercent3 + tenantOnlyPercent4;
+
 
     public long getTenantSpace1() {
         return tenantSpace1;
@@ -91,6 +107,7 @@ public class SpaceForm {
     }
 
     public long getTotalSqFt() {
+        this.totalSqFt = tenantSpace1 + tenantSpace2 + tenantSpace3 + tenantSpace4 + commonSpace1 + commonSpace2;
         return totalSqFt;
     }
 
@@ -99,6 +116,7 @@ public class SpaceForm {
     }
 
     public long getTenantSqFt() {
+        this.tenantSqFt = tenantSpace1 + tenantSpace2 + tenantSpace3 + tenantSpace4;
         return tenantSqFt;
     }
 
@@ -107,6 +125,7 @@ public class SpaceForm {
     }
 
     public long getCommonSqFt() {
+        this.commonSqFt = commonSpace1 + commonSpace2;
         return commonSqFt;
     }
 
@@ -115,6 +134,8 @@ public class SpaceForm {
     }
 
     public long getTenantPercentOfTotal1() {
+
+        this.tenantPercentOfTotal1 = zeroPercent(tenantSpace1, totalSqFt);
         return tenantPercentOfTotal1;
     }
 
@@ -123,6 +144,7 @@ public class SpaceForm {
     }
 
     public long getTenantPercentOfTotal2() {
+        this.tenantPercentOfTotal2 = zeroPercent(tenantSpace2, totalSqFt);
         return tenantPercentOfTotal2;
     }
 
@@ -131,6 +153,7 @@ public class SpaceForm {
     }
 
     public long getTenantPercentOfTotal3() {
+        this.tenantPercentOfTotal3 = zeroPercent(tenantSpace3, totalSqFt);
         return tenantPercentOfTotal3;
     }
 
@@ -139,6 +162,7 @@ public class SpaceForm {
     }
 
     public long getTenantPercentOfTotal4() {
+        this.tenantPercentOfTotal4 = zeroPercent(tenantSpace4, totalSqFt);
         return tenantPercentOfTotal4;
     }
 
@@ -147,6 +171,7 @@ public class SpaceForm {
     }
 
     public long getCommonPercentofTotal1() {
+        this.commonPercentofTotal1 = zeroPercent(commonSpace1, totalSqFt);
         return commonPercentofTotal1;
     }
 
@@ -155,6 +180,7 @@ public class SpaceForm {
     }
 
     public long getCommonPercentofTotal2() {
+        this.commonPercentofTotal2 = zeroPercent(commonSpace2, totalSqFt);
         return commonPercentofTotal2;
     }
 
@@ -171,6 +197,7 @@ public class SpaceForm {
     }
 
     public long getTenantOnlyPercent1() {
+        this.tenantOnlyPercent1 = zeroPercent(tenantSpace1, tenantSqFt);
         return tenantOnlyPercent1;
     }
 
@@ -179,6 +206,7 @@ public class SpaceForm {
     }
 
     public long getTenantOnlyPercent2() {
+        this.tenantOnlyPercent2 = zeroPercent(tenantSpace2, tenantSqFt);
         return tenantOnlyPercent2;
     }
 
@@ -187,6 +215,7 @@ public class SpaceForm {
     }
 
     public long getTenantOnlyPercent3() {
+        this.tenantOnlyPercent3 = zeroPercent(tenantSpace3, tenantSqFt);
         return tenantOnlyPercent3;
     }
 
@@ -195,6 +224,7 @@ public class SpaceForm {
     }
 
     public long getTenantOnlyPercent4() {
+        this.tenantOnlyPercent4 = zeroPercent(tenantSpace4, tenantSqFt);
         return tenantOnlyPercent4;
     }
 

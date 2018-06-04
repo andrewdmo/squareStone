@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
 
-    <title>squareStone Analysis</title>
+    <title>Purchase Costs</title>
 
     <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
@@ -61,6 +61,7 @@
 
         </div><!--NAME-->
         <br/>
+
         <!--CHANGE CURRENT color per page:-->
         <div class="ten columns menuBar">
 
@@ -83,10 +84,9 @@
             </a>
 
 
-            <div>
-                <code class="menuText" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
-                </code>
-                <code class="menuText" id="gaddy" th:text="'gAddy: ' + *{mapping.gaddy}"></code>
+            <div class="menuBarFieldBack">
+                <p class="menuText dataField" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
+                </p>
             </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
             <!--</p>-->
@@ -154,9 +154,9 @@
                     <td>
                         <fieldset>
                             <legend class="tableLegend">Miscellaneous Costs:</legend>
-                            <label class="tableLabel" for="miscCost1"></label>
+                            <label class="tableLabel" for="miscCost1">I.</label>
                             <input class="tableField" type="text" th:field="*{miscCost1}" id="miscCost1"/>
-                            <label class="tableLabel" for="miscCost2"></label>
+                            <label class="tableLabel" for="miscCost2">II.</label>
                             <input class="tableField" type="text" th:field="*{miscCost2}" id="miscCost2"/>
                         </fieldset>
                     </td>
@@ -200,7 +200,7 @@
 
 
                 <tr>
-                    <td><input class="button" type="submit" value="Submit"/></td>
+                    <td colspan="2"><input class="button" type="submit" value="Submit"/></td>
                 </tr>
                 </tbody>
 

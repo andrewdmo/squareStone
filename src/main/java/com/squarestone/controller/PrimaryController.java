@@ -50,13 +50,13 @@ public class PrimaryController {
 
     @GetMapping("/spacedims")
     public String spaceDimensions(Model model) {
-        System.out.println("spacedims");
+        System.out.println("GET spacedims");
         return "spacedims";
     }
 
     @PostMapping("/spacedims")
     public String spaceDimensionsForm(SpaceForm spaceForm) {
-        System.out.println("spaceDimsForm");
+        System.out.println("C1%total:" + spaceForm.getCommonPercentofTotal1());
         return "spacedims";
     }
 
