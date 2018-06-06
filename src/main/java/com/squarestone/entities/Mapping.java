@@ -1,11 +1,12 @@
 package com.squarestone.entities;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@EntityScan
-public class Mapping {
+@Document(collection = "session")
+public class Mapping extends SimpleModule {
 
-    private String gaddy = null;
+    private String gaddy = "";
 
     private String defaultGaddy = "3917+university+drive+durham+nc";
 

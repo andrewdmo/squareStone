@@ -1,9 +1,10 @@
 package com.squarestone.entities;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import com.fasterxml.jackson.databind.module.SimpleModule;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@EntityScan
-public class SpaceForm {
+@Document(collection = "session")
+public class SpaceForm extends SimpleModule {
 
 
     //simple FOR loop should work for unlimited variables:
@@ -50,9 +51,9 @@ public class SpaceForm {
     }
 
     private long tenantOnlyPercent1;
-    private long tenantOnlyPercent2 = zeroPercent(tenantSpace2, tenantSqFt);
-    private long tenantOnlyPercent3 = zeroPercent(tenantSpace3, tenantSqFt);
-    private long tenantOnlyPercent4 = zeroPercent(tenantSpace4, tenantSqFt);
+    private long tenantOnlyPercent2;
+    private long tenantOnlyPercent3;
+    private long tenantOnlyPercent4;
 
 
     private Long tenantOnlyPercentSum = tenantOnlyPercent1 + tenantOnlyPercent2 + tenantOnlyPercent3 + tenantOnlyPercent4;

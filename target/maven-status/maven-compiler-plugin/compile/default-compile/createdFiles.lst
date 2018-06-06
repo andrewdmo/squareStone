@@ -1,0 +1,6 @@
+com/squarestone/config/EnableMongoHttpSession.class
+com/squarestone/entities/SpaceForm.class
+com/squarestone/config/MongoSessionConfig.class
+com/squarestone/services/MapService.class
+com/squarestone/repos/MongoSessionRepo.class
+com/squarestone/config/MongoConfig.class

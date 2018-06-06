@@ -1,8 +1,8 @@
 package com.squarestone.entities;
 
-import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@EntityScan
+@Document(collection = "session")
 public class PurchaseForm {
 
     private long appraisal;
@@ -25,10 +25,10 @@ public class PurchaseForm {
 
     private long purchasePrice;
 
-    private long purchaseTotal = addtCostSum + purchasePrice;
+    private long purchaseTotal;
 
     public long getAddtCostSum() {
-        addtCostSum = appraisal + roofInsp + ph1EnvAssess + ph2EnvAssess + attyFee + survey + miscCost1 + miscCost2;
+        this.addtCostSum = appraisal + roofInsp + ph1EnvAssess + ph2EnvAssess + attyFee + survey + miscCost1 + miscCost2;
         return addtCostSum;
     }
 

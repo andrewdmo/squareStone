@@ -85,7 +85,7 @@
 
 
             <div class="menuBarFieldBack">
-                <p class="menuText dataField" id="costSum" th:text="'costSum: ' + *{purchaseForm.costSum}">
+                <p class="menuText dataField" id="costSum" th:text="'costSum: ' + ${purchaseForm.getCostSum()}">
                 </p>
             </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->

@@ -4,10 +4,11 @@ import com.squarestone.entities.GotBeta;
 import com.squarestone.entities.Mapping;
 import org.springframework.stereotype.Service;
 
+import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Service
-public class MapService {
+public class MapService implements Serializable {
 
 //    private static Mapping mapping;
 
