@@ -23,9 +23,6 @@
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
 
-    <!--<script type="text/javascript" th:src="@{/scripts/velocity.min.js}" src="/static/scripts/velocity.min.js"></script>-->
-    <script th:src="@{/scripts/viewport.js}" src="../static/scripts/viewport.js"></script>
-
 </head>
 
 <!--//body border:-->
@@ -42,25 +39,34 @@
 
     <div class="row top">
 
-        <div class="four columns profile">
-            <p class="profileText">Back Home</p>
+        <div class="row profile">
 
-            <a th:href="@{/index}" href="index.html" rel="#home">
-                <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
-                     class="profile pic shade"/>
-            </a>
-        </div>
+            <div class="four columns" style="width: fit-content">
+                <p class="profileText">Back Home</p>
 
-        <div class="eight columns name">
-            <a th:href="@{/index}" href="index.html">
-                <h1 class="text shadow link">squareStone</h1></a>
+                <a th:href="@{/index}" href="index.html" rel="#home">
+                    <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
+                         class="profile pic shade"/>
+                </a>
+            </div>
 
-            <a th:href="@{/index}" href="index.html">
-                <h2 class="text shadow link u-pull-left">Commercial Property Analysis
-                </h2></a>
+            <div class="eight columns profile name">
+                <a th:href="@{/index}" href="index.html">
+                    <h1 class="text shadow link">squareStone</h1></a>
 
-        </div><!--NAME-->
-        <br/>
+                <a th:href="@{/index}" href="index.html">
+                    <h2 class="text shadow link u-pull-left">Commercial Property Analysis
+                    </h2></a>
+
+            </div><!--NAME-->
+
+            <div class="menuBarFieldBack clock">
+                <p class="menuText dataField" th:text="${#dates.format(#dates.createNow(),'HH:mm MM/dd/YY')}">
+                </p>
+            </div><!--CLOCK-->
+            <br/>
+        </div><!--row profile-->
+
 
         <!--CHANGE CURRENT color per page:-->
         <div class="ten columns menuBar">
@@ -84,17 +90,34 @@
             </a>
 
 
-            <div class="menuBarFieldBack">
-                <p class="menuText dataField" id="totalSqFt" th:object="${spaceForm}"
-                   th:text="'totalSqFt: ' + *{totalSqFt}">
-                </p>
+            <div class="menuBarFieldBack values">
+                <table style="margin-bottom: 0">
+                    <!--<thead></thead>-->
+                    <tbody>
+                    <tr>
+                        <td style="padding: 0">
+                            <fieldset style="margin-bottom: 0">
+                                <!--<legend>Total:</legend>-->
+                                <label for="totalSqFt">totalSqFt: </label>
+                                <p class="menuText dataField values" id="totalSqFt" th:object="${spaceForm}"
+                                   th:text="*{totalSqFt}">
+                                </p>
+
+                                <label for="purchaseTotal">purchaseTotal: </label>
+                                <p class="menuText dataField values" id="purchaseTotal" th:object="${purchaseForm}"
+                                   th:text="*{purchaseTotal}">
+                                </p>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-            <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
-            <!--</p>-->
+
         </div><!--row two menuBar-->
 
 
-    </div><!--row TOP--><!--row TOP--><!--row TOP--><!--row TOP-->
+    </div><!--row TOP-->
 
 
     <div class="row middle">

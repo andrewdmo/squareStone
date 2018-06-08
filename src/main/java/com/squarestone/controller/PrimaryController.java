@@ -44,7 +44,7 @@ public class PrimaryController implements Serializable {
 
     @GetMapping("/purchase")
     public String purchase(Model model) {
-        System.out.println("totalCostGET: " + purchaseForm.getCostSum());
+        System.out.println("totalCostGET: " + purchaseForm.getPurchaseTotal());
         return "purchase";
     }
 
@@ -52,7 +52,7 @@ public class PrimaryController implements Serializable {
     public String purchaseForm(PurchaseForm purchaseForm) {
 //        System.out.println("appraisal:" + purchaseForm.getAppraisal());
 //        System.out.println("addtCostSum:" + purchaseForm.getAddtCostSum());
-        System.out.println("totalCostPOST: " + purchaseForm.getCostSum());
+        System.out.println("totalCostPOST: " + purchaseForm.getPurchaseTotal());
         return "purchase";
     }
 

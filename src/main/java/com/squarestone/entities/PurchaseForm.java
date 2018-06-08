@@ -32,7 +32,7 @@ public class PurchaseForm {
         return addtCostSum;
     }
 
-    public long getCostSum() {
+    public long getPurchaseTotal() {
         this.purchaseTotal = addtCostSum + purchasePrice;
         return purchaseTotal;
     }

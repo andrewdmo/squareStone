@@ -85,7 +85,7 @@
 
 
             <div class="menuBarFieldBack">
-                <p class="menuText dataField" id="costSum" th:text="'costSum: ' + ${purchaseForm.getCostSum()}">
+                <p class="menuText dataField" id="costSum" th:text="'purhastTotal: ' + ${purchaseForm.purchaseTotal}">
                 </p>
             </div>
             <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
@@ -194,7 +194,7 @@
                 <tr>
                     <td><label class="tableLabel">Total purchase costs:</label>
                         <code class="tableField" style="text-decoration: blink"
-                              th:text="*{costSum}">(TotalCost)</code>
+                              th:text="*{purchaseTotal}">(TotalCost)</code>
                     </td>
                 </tr>
 

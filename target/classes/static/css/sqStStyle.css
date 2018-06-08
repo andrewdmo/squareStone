@@ -259,7 +259,7 @@ li,
     position: absolute;
     opacity: 1.2;
     height: 2.5rem;
-    /*width: 100%;*/
+    width: 100%;
     max-width: 95%;
     padding-right: 1vmin;
     margin: 1vmin 0 0 0;
@@ -276,10 +276,24 @@ li,
 }
 
 .menuBarFieldBack {
-    max-width: 15vw;
+    /*max-width: 15vw;*/
     position: absolute;
     right: 0;
+    bottom: 0;
     z-index: 6;
+}
+
+.menuBarFieldBack.clock {
+    bottom: 3rem;
+    position: absolute;
+    top: 0;
+}
+
+.menuBarFieldBack.values {
+    max-width: 20vw;
+    border: 2px solid #073763;
+    border-radius: 5px;
+    background-color: rgba(226, 226, 226, 0.7);
 }
 
 /*.menuText.dataField:nth-child(2) {*/
@@ -304,9 +318,8 @@ li,
 
 .menuText.dataField {
     display: inline-block;
-    position: relative;
     /*height: 1.5em;*/
-    width: fit-content;
+    /*width: fit-content;*/
     float: right;
     font-style: italic;
     font-size: 1em;
@@ -317,6 +330,10 @@ li,
     vertical-align: center;
     text-align: center;
     z-index: 7;
+}
+
+.menuText.dataField.values {
+    padding: 0 !important;
 }
 
 .menuText.home {
@@ -384,21 +401,6 @@ li,
     background: #bfbf56; /*test*/
 }
 
-.name {
-    position: absolute;
-    z-index: 6;
-    will-change: color, border;
-    height: 100%;
-    max-height: 16vh; /*keep same as profile??*/
-    width: 100%;
-    /*width: calc(20vh + 1em);*/
-    right: 0;
-    max-width: calc(100% - 20vh); /*leave*/
-    margin-top: 1vmin;
-    padding: 1vmin 1vmin 1vmin 2vmin; /*same as text & name*/
-    text-decoration: none;
-}
-
 .noLM {
     margin-left: 0;
 }
@@ -422,13 +424,26 @@ li,
 
 .profile {
     position: absolute;
+    z-index: 6;
+    top: 0;
     margin: 1vmin 0 0 0;
     /*padding: 1vmin; !*same as text & name*!*/
-    height: calc(20vh - (1vh + 2em)) !important; /*keep same as name*/
-    /*width: 16vh !important;*/
     border-radius: 5px;
     /*overflow: hidden;*/
     /*background-color: #8e8a2d;*/
+}
+
+.profile.name {
+    position: relative;
+    /*float: right;*/
+    z-index: 6;
+    will-change: color, border;
+    height: calc(20vh - 2.5em) !important; /*keep same as name*/
+    right: 0;
+    max-width: calc(100% - 20vh); /*leave*/
+    margin-top: 1.5rem;
+    /*padding: 1vmin 1vmin 1vmin 2vmin; !*same as text & name*!*/
+    text-decoration: none;
 }
 
 .profile.pic {
@@ -437,8 +452,8 @@ li,
     will-change: scale, opacity;
     margin: 0;
     padding: 0;
-    /*height: 100%;*/
-    /*width: 100%;*/
+    height: calc(20vh - 2.5em) !important; /*keep same as name*/
+    width: calc(20vh - 2.5em) !important;
     background: transparent;
     /*height: 100%;*/
     /*animation: linear 1s;*/
@@ -526,8 +541,16 @@ tr,
     width: 100%;
 }
 
+tr:first-child {
+    background-color: rgba(226, 226, 226, 0.7);
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(161, 161, 161, 0.7);
+}
+
 tr:nth-child(even) {
-    background-color: rgba(70, 149, 238, 0.7);
+    background-color: rgba(226, 226, 226, 0.7);
 }
 
 .tableDouble {
