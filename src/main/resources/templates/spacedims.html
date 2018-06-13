@@ -72,7 +72,7 @@
         <div class="ten columns menuBar">
 
             <a th:href="@{/home}" href="index.html" rel="#home">
-                <p class="menuText home shadow none">Home
+                <p class="menuText shadow none">Home
                 </p>
             </a>
 
@@ -81,41 +81,42 @@
                 <p class="menuText shadow none">Mapping
                 </p>
             </a>
-            <a th:href="@{/contact}" href="contact.html">
-                <p class="menuText shadow none">Contact</p>
-            </a>
             <a th:href="@{/about}" href="about.html">
                 <p class="menuText shadow none">About
                 </p>
             </a>
 
 
-            <div class="menuBarFieldBack values">
+        </div><!--row two menuBar-->
+
+        <div class="menuBarFieldBack values">
+            <fieldset style="margin-bottom: 0">
+
                 <table style="margin-bottom: 0">
                     <!--<thead></thead>-->
                     <tbody>
-                    <tr>
+                    <tr class="none">
                         <td style="padding: 0">
-                            <fieldset style="margin-bottom: 0">
-                                <!--<legend>Total:</legend>-->
-                                <label for="totalSqFt">totalSqFt: </label>
-                                <p class="menuText dataField values" id="totalSqFt" th:object="${spaceForm}"
-                                   th:text="*{totalSqFt}">
-                                </p>
-
-                                <label for="purchaseTotal">purchaseTotal: </label>
-                                <p class="menuText dataField values" id="purchaseTotal" th:object="${purchaseForm}"
-                                   th:text="*{purchaseTotal}">
-                                </p>
-                            </fieldset>
+                            <!--<legend>Total:</legend>-->
+                            <label for="totalSqFt">totalSqFt: </label>
+                            <p class="menuText dataField values" id="totalSqFt" th:object="${spaceForm}"
+                               th:text="*{totalSqFt}">
+                            </p>
+                        </td>
+                    </tr>
+                    <tr class="none">
+                        <td style="padding: 0">
+                            <label for="purchaseTotal">purchaseTotal: </label>
+                            <p class="menuText dataField values" id="purchaseTotal" th:object="${purchaseForm}"
+                               th:text="*{purchaseTotal}">
+                            </p>
                         </td>
                     </tr>
                     </tbody>
                 </table>
-            </div>
+            </fieldset>
 
-        </div><!--row two menuBar-->
-
+        </div><!--menuBarFieldBack values-->
 
     </div><!--row TOP-->
 
