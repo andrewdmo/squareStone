@@ -131,21 +131,21 @@
         <div class="twelve columns">
             <form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">
                 <table>
-                    <tr>
+                    <tr class="none">
                         <th class="tableHeader">
                             <h1 class="tableHeader">
                                 Map a property:
                             </h1>
                         </th>
                     </tr>
-                    <tr>
+                    <tr class="none">
                         <td class="tableLabel row">
                             <label class="tableLabel" for="gaddy">Address:</label>
                             <input type="text" th:field="*{gaddy}" id="gaddy" class="tableField"
                                    placeholder="[search feature pending]"/>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="none">
                         <td>
                             <input type="submit" class="button" value="Submit"/>
                         </td>

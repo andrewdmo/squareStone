@@ -2,43 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8"/>
-
-    <title>Space dimensions</title>
+    <title>Howdy World</title>
 
     <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
-    <!--preload map, change BODY link too if needed:-->
 
-
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="keywords"
-          content="commercial, estimating, asheville, nc, north carolina"/>
-    <meta name="description" content="CK"/>
-    <meta name="robots" content="index,follow"/>
-    <link rel="stylesheet" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
-    <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
-    <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
-
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-
-
 </head>
-
-<!--//body border:-->
-<div id="left"></div>
-<div id="right"></div>
-<div id="top"></div>
-<div id="bottom"></div>
-
-<div class="backborder"></div>
-
-
 <body>
-
-<div class="container">
+<div id="container" class="container">
 
     <div class="row top">
 
@@ -63,7 +38,9 @@
 
             </div><!--NAME-->
 
-            <div id="clock" class="menuBarFieldBack clock">
+            <div class="menuBarFieldBack clock">
+                <p class="menuText dataField" th:text="${#dates.format(#dates.createNow(),'HH:mm MM/dd/YY')}">
+                </p>
             </div><!--CLOCK-->
             <br/>
         </div><!--row profile-->
@@ -106,7 +83,10 @@
                     </tr>
                     <tr class="none">
                         <td style="padding: 0">
-
+                            <label for="purchaseTotal">purchaseTotal: </label>
+                            <p class="menuText dataField values" id="purchaseTotal" th:object="${purchaseForm}"
+                               th:text="*{purchaseTotal}">
+                            </p>
                         </td>
                     </tr>
                     </tbody>
@@ -116,16 +96,26 @@
         </div><!--menuBarFieldBack values-->
 
     </div><!--row TOP-->
+</div>
+<script type="text/babel">
 
-    <div id="middle" class="row middle"></div>
+    ReactDOM.render(
+        <h1>Howdy, world!</h1>,
+        document.getElementById('container')
+    );
 
-    <script type="text/babel" th:src="@{/scripts/clock.js}" src="../static/scripts/clock.js">
-    </script>
+</script>
+<!--
+  Note: this page is a great way to try React but it's not suitable for production.
+  It slowly compiles JSX with Babel in the browser and uses a large development build of React.
 
-    <!--<script type="text/babel" src="/static/scripts/topJS.js"></script>-->
-    <!--<div id="topJS"></div>-->
-    <!--<div id="middleJS"></div>-->
+  To set up a production-ready React build environment, follow these instructions:
+  * https://reactjs.org/docs/add-react-to-a-new-app.html
+  * https://reactjs.org/docs/add-react-to-an-existing-app.html
 
-</div><!--container-->
+  You can also use React without JSX, in which case you can remove Babel:
+  * https://reactjs.org/docs/react-without-jsx.html
+  * https://reactjs.org/docs/cdn-links.html
+-->
 </body>
 </html>

@@ -1,7 +1,6 @@
 package com.squarestone.controller;
 
 import com.squarestone.entities.Mapping;
-import com.squarestone.entities.MongoSession;
 import com.squarestone.entities.PurchaseForm;
 import com.squarestone.entities.SpaceForm;
 import com.squarestone.services.MapService;
@@ -22,7 +21,6 @@ public class PrimaryController implements Serializable {
     private static Mapping mapping = new Mapping();
     private static PurchaseForm purchaseForm = new PurchaseForm();
     private static SpaceForm spaceForm = new SpaceForm();
-    private static MongoSession mongoSession = new MongoSession();
 
     @ModelAttribute
     public void modelAttributes(Model model) {
@@ -31,7 +29,6 @@ public class PrimaryController implements Serializable {
         model.addAttribute("mapping", mapping);
         model.addAttribute("purchaseForm", purchaseForm);
         model.addAttribute("spaceForm", spaceForm);
-        model.addAttribute("mongoSession", mongoSession);
     }
 
 
@@ -54,6 +51,11 @@ public class PrimaryController implements Serializable {
 //        System.out.println("addtCostSum:" + purchaseForm.getAddtCostSum());
         System.out.println("totalCostPOST: " + purchaseForm.getPurchaseTotal());
         return "purchase";
+    }
+
+    @RequestMapping("/react")
+    public String react(Model model) {
+        return "react";
     }
 
     @GetMapping("/spacedims")

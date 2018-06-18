@@ -296,7 +296,7 @@ li,
     right: 0;
     border: 2px solid #073763;
     border-radius: 5px;
-    background-color: rgba(141, 138, 126, 0.81);
+    background-color: rgba(226, 226, 226, 0.81);
 }
 
 /*.menuText.dataField:nth-child(2) {*/
@@ -359,9 +359,9 @@ li,
     max-width: 960px;
     /*background: #bfbf56; !*test*!*/
     /*background: linear-gradient(*/
-            /*to bottom, #F1F1F1,*/
-            /*lightsteelblue) no-repeat fixed; !*X% how far gradient (middle) is*!*/
-    background-color: #8d8a7e;
+    /*to bottom, #F1F1F1,*/
+    /*lightsteelblue) no-repeat fixed; !*X% how far gradient (middle) is*!*/
+    background-color: #e2e2e2;
     background-size: contain;
     border: 2px solid #073763;
     border-radius: 5px;

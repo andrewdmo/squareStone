@@ -9,10 +9,7 @@
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
     <!--preload map, change BODY link too if needed:-->
-    <link rel="preload" as="document"
-          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
-          href="https://www.google.com/maps/embed/v1/"/>
-    <!--two more-->
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -22,6 +19,11 @@
     <link rel="stylesheet" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
+
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
 
 </head>
 
@@ -35,6 +37,7 @@
 
 
 <body>
+
 <div class="container">
 
     <div class="row top">
@@ -60,9 +63,7 @@
 
             </div><!--NAME-->
 
-            <div class="menuBarFieldBack clock">
-                <p class="menuText dataField" th:text="${#dates.format(#dates.createNow(),'HH:mm MM/dd/YY')}">
-                </p>
+            <div id="clock" class="menuBarFieldBack clock">
             </div><!--CLOCK-->
             <br/>
         </div><!--row profile-->
@@ -99,17 +100,13 @@
                         <td style="padding: 0">
                             <!--<legend>Total:</legend>-->
                             <label for="totalSqFt">totalSqFt: </label>
-                            <p class="menuText dataField values" id="totalSqFt" th:object="${spaceForm}"
-                               th:text="*{totalSqFt}">
-                            </p>
+                            <input type="number" class="menuText dataField values" id="totalSqFt" name="totalSqFt"
+                                   value="0"/>
                         </td>
                     </tr>
                     <tr class="none">
                         <td style="padding: 0">
-                            <label for="purchaseTotal">purchaseTotal: </label>
-                            <p class="menuText dataField values" id="purchaseTotal" th:object="${purchaseForm}"
-                               th:text="*{purchaseTotal}">
-                            </p>
+
                         </td>
                     </tr>
                     </tbody>
@@ -120,170 +117,14 @@
 
     </div><!--row TOP-->
 
+    <div id="middle" class="row middle"></div>
 
-    <div class="row middle">
+    <script type="text/babel" th:src="@{/scripts/clock.js}" src="../static/scripts/clock.js">
+    </script>
 
-        <form th:action="@{/spacedims}" action="#" th:object="${spaceForm}" id="spaceForm" method="post">
-            <table class="twelve columns" title="Space Dimensions">
-                <thead>
-
-                <tr>
-                    <th colspan="2">
-                        <h1 class="tableHeader">Space Dimensions</h1>
-                    </th>
-                </tr>
-
-                </thead>
-
-
-                <!--ROW 1-->
-
-                <tbody>
-                <tr>
-                    <td>
-                        <fieldset name="totalSqFt" form="spaceForm">
-                            <legend class="tableHeader h2">Total Sq Footage</legend>
-                        </fieldset><!--totalSqFt-->
-                    </td>
-
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <!--for loop later:-->
-                        <fieldset name="tenantSqFt">
-                            <legend class="tableHeader h3">Tenant Space</legend>
-
-                            <label class="tableLabel" for="tenantSpace1">Unit 1</label>
-                            <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
-                                   value="0" autofocus="autofocus"/>
-
-                            <label class="tableLabel" for="tenantSpace2">Unit 2</label>
-                            <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
-                                   value="0"/>
-
-                            <label class="tableLabel" for="tenantSpace3">Unit 3</label>
-                            <input class="tableField" type="text" th:field="*{tenantSpace3}" id="tenantSpace3"
-                                   value="0"/>
-
-                            <label class="tableLabel" for="tenantSpace4">Unit 4</label>
-                            <input class="tableField" type="text" th:field="*{tenantSpace4}" id="tenantSpace4"
-                                   value="0"/>
-
-                            <label class="tableLabel" for="tenantSqFt">Total Tenant Sq Ft</label>
-                            <code class="tableField" th:text="*{tenantSqFt}" id="tenantSqFt">tenantTotalSqFt</code>
-
-                        </fieldset><!--tenantSqFt-->
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-
-                        <fieldset name="commonSqFt">
-                            <legend class="tableHeader h3">Common Space</legend>
-                            <label class="tableLabel" for="commonSpace1">Common 1</label>
-                            <input class="tableField" type="text" th:field="*{commonSpace1}" id="commonSpace1"
-                                   th:value="0"
-                                   value="0"/>
-
-                            <label class="tableLabel" for="commonSpace2">Common 2</label>
-                            <input class="tableField" type="text" th:field="*{commonSpace2}" id="commonSpace2"
-                                   th:value="0"
-                                   value="0"/>
-
-                            <label class="tableLabel" for="commonSqFt">Total Common Sq Ft</label>
-                            <code class="tableField" th:text="*{commonSqFt}" id="commonSqFt">commonTotalSqFt</code>
-
-                        </fieldset><!--commonSqFt-->
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <fieldset name="percentOfTotal">
-                            <legend class="tableHeader h3">% of Total Sq Ft</legend>
-                            <fieldset>
-
-                                <legend class="tableHeader h3">Tenant Space</legend>
-
-                                <label class="tablelabel" for="tenantPercentOfTotal1">Unit 1
-                                    <code class="tableField" th:text="*{tenantPercentOfTotal1}"
-                                          id="tenantPercentOfTotal1">tenantPercentOfTotal1</code>
-                                </label>
-
-                                <label class="tablelabel" for="tenantPercentOfTotal2">Unit 2</label>
-                                <code class="tableField" th:text="*{tenantPercentOfTotal2}"
-                                      id="tenantPercentOfTotal2">tenantPercentOfTotal2</code>
-
-                                <label class="tablelabel" for="tenantPercentOfTotal3">Unit 3</label>
-                                <code class="tableField" th:text="*{tenantPercentOfTotal3}"
-                                      id="tenantPercentOfTotal3">tenantPercentOfTotal3</code>
-
-                                <label class="tablelabel" for="tenantPercentOfTotal4">Unit 4</label>
-                                <code class="tableField" th:text="*{tenantPercentOfTotal4}"
-                                      id="tenantPercentOfTotal4">tenantPercentOfTotal4</code>
-
-                            </fieldset>
-
-                            <fieldset>
-                                <legend class="tableHeader h3">Common Space</legend>
-
-                                <label class="tablelabel" for="commonPercentofTotal1">Common 1</label>
-                                <code class="tableField" th:text="*{commonPercentofTotal1}"
-                                      id="commonPercentofTotal1">common%total1</code>
-
-                                <label class="tablelabel" for="commonPercentofTotal2">Common 2</label>
-                                <code class="tableField" th:text="*{commonPercentofTotal2}"
-                                      id="commonPercentofTotal2">common%total</code>
-
-                            </fieldset>
-                        </fieldset><!--percentOfTotal-->
-
-                        <fieldset name="tenantOnlyPercent">
-                            <legend class="tableHeader h3">% of Tenant-Only Sq Ft</legend>
-
-                            <label class="tablelabel" for="tenantOnlyPercent1">Unit 1:</label>
-                            <code class="tableField" th:text="*{tenantOnlyPercent1}"
-                                  id="tenantOnlyPercent1">tenantOnly%1</code>
-
-                            <label class="tablelabel" for="tenantOnlyPercent2">Unit 2:</label>
-                            <code class="tableField" th:text="*{tenantOnlyPercent2}"
-                                  id="tenantOnlyPercent2">tenantOnly%2</code>
-
-                            <label class="tablelabel" for="tenantOnlyPercent3">Unit 3:</label>
-                            <code class="tableField" th:text="*{tenantOnlyPercent1}"
-                                  id="tenantOnlyPercent3">tenantOnly%3</code>
-
-                            <label class="tablelabel" for="tenantOnlyPercent4">Unit 4:</label>
-                            <code class="tableField" th:text="*{tenantOnlyPercent4}"
-                                  id="tenantOnlyPercent4">tenantOnly%4</code>
-
-
-                        </fieldset><!--tenantOnlyPercent-->
-                    </td>
-                </tr><!--1st row-->
-
-                <tr>
-                    <td colspan="2">
-                        <p class="menuText dataField" style="float: left" id="totalSqFt" th:object="${spaceForm}"
-                           th:text="'totalSqFt: ' + *{totalSqFt}">totalSqFt</p>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2"><input class="button" type="submit" value="Submit"/></td>
-                </tr>
-
-                </tbody>
-            </table><!--six columns R-->
-
-        </form>
-
-
-    </div><!--row middle-->
-
+    <!--<script type="text/babel" src="/static/scripts/topJS.js"></script>-->
+    <!--<div id="topJS"></div>-->
+    <!--<div id="middleJS"></div>-->
 
 </div><!--container-->
 </body>
