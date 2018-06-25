@@ -108,10 +108,10 @@ input[type="button"] {
     -moz-appearance: none;
     appearance: none;
 
-    color: #bfbf56;
+    color: palegoldenrod;
     background-color: #8d8a7e;
     border: #073763 solid 2px;
-    /*margin: 5vh auto;*/
+    margin: 0;
     width: 100%;
     vertical-align: center;
     transition: all .5s;
@@ -175,6 +175,14 @@ input[type="button"]:focus {
     transform: scale(1.1);
 }
 
+.index1 {
+    margin: 1vmin 0 0 0;
+}
+
+.index2 {
+    margin: 0 0 1vmin 0;
+}
+
 li,
 .li {
     margin-bottom: .5em;
@@ -198,19 +206,19 @@ li,
 }
 
 .main.back {
-    background-color: rgba(226, 226, 226, 0.7);
+    background: #073763;
     border-radius: inherit;
     margin: 1vmin 0;
-    padding: 1vmin;
+    /*padlding: 1vmin;*/
     /*float: right;*/
 }
 
 .main.text {
-    /*background-color: rgba(226, 226, 226, 0.7);*/
-
+    background-color: #cdcdcd;
+    text-align: center;
+    /*opacity: .95;*/
     border-radius: inherit;
-    margin: 1vmin 0;
-    padding: 1vmin;
+    margin: .5vmin;
     font-size: calc(1.5rem + 0.2vw);
 }
 
@@ -353,7 +361,7 @@ li,
 
 .middle {
     margin: calc(20vh + 2em) 0 0 0;
-    padding: 1vmin;
+    /*padding: 1vmin;*/
     /*height: 25vh;*/
     width: 100%;
     max-width: 960px;
@@ -361,9 +369,9 @@ li,
     /*background: linear-gradient(*/
     /*to bottom, #F1F1F1,*/
     /*lightsteelblue) no-repeat fixed; !*X% how far gradient (middle) is*!*/
-    background-color: #e2e2e2;
-    background-size: contain;
-    border: 2px solid #073763;
+    /*background-color: #e2e2e2;*/
+    /*background-size: contain;*/
+    /*border: 2px solid #073763;*/
     border-radius: 5px;
     box-sizing: border-box;
     /*z-index: 6;*/
@@ -586,7 +594,7 @@ tr:nth-child(even) {
 .tableLabel.row {
     padding: 1vmax;
     text-align: left;
-    background-color: rgba(70, 149, 238, 0.7);
+    /*background-color: rgba(70, 149, 238, 0.7);*/
 }
 
 .tableLegend {

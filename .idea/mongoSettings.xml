@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MongoConfiguration">
+    <option name="serverConfigurations">
+      <list>
+        <ServerConfiguration>
+          <option name="label" value="embedded" />
+          <option name="serverUrls">
+            <list>
+              <option value="localhost:51959" />
+            </list>
+          </option>
+          <option name="sshTunnelingConfiguration">
+            <SshTunnelingConfiguration />
+          </option>
+        </ServerConfiguration>
+      </list>
+    </option>
+    <option name="shellPath" value="/var/folders/c1/42q14ck55jl0zblsg58h1lfw0000gp/T/embedmongo-db-3f266ed8-7a64-4390-b879-35278cbdc604" />
+  </component>
+</project>
