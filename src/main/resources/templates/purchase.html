@@ -9,10 +9,7 @@
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
     <!--preload map, change BODY link too if needed:-->
-    <link rel="preload" as="document"
-          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
-          href="https://www.google.com/maps/embed/v1/"/>
-    <!--two more-->
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -22,6 +19,11 @@
     <link rel="stylesheet" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
+
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
 
 </head>
 
@@ -35,6 +37,7 @@
 
 
 <body>
+
 <div class="container">
 
     <div class="row top">
@@ -60,9 +63,7 @@
 
             </div><!--NAME-->
 
-            <div class="menuBarFieldBack clock">
-                <p class="menuText dataField" th:text="${#dates.format(#dates.createNow(),'HH:mm MM/dd/YY')}">
-                </p>
+            <div id="clock" class="menuBarFieldBack clock">
             </div><!--CLOCK-->
             <br/>
         </div><!--row profile-->
@@ -72,10 +73,9 @@
         <div class="ten columns menuBar">
 
             <a th:href="@{/home}" href="index.html" rel="#home">
-                <p class="menuText shadow none">Home
+                <p class="menuText home shadow current">Home
                 </p>
             </a>
-
 
             <a th:href="@{/mapping}" href="mapping.html">
                 <p class="menuText shadow none">Mapping
@@ -92,28 +92,17 @@
         <div class="menuBarFieldBack values">
             <fieldset style="margin-bottom: 0">
 
-                <table style="margin-bottom: 0">
-                    <!--<thead></thead>-->
-                    <tbody>
-                    <tr class="none">
-                        <td style="padding: 0">
-                            <!--<legend>Total:</legend>-->
-                            <label for="totalSqFt">totalSqFt: </label>
-                            <p class="menuText dataField values" id="totalSqFt" th:object="${spaceForm}"
-                               th:text="*{totalSqFt}">
-                            </p>
-                        </td>
-                    </tr>
-                    <tr class="none">
-                        <td style="padding: 0">
-                            <label for="purchaseTotal">purchaseTotal: </label>
-                            <p class="menuText dataField values" id="purchaseTotal" th:object="${purchaseForm}"
-                               th:text="*{purchaseTotal}">
-                            </p>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="none" style="padding: 0">
+                    <!--<legend>Total:</legend>-->
+                    <label for="totalSqFt">totalSqFt: </label>
+                    <p class="menuText dataField values" id="totalSqFt">
+                    </p>
+                </div>
+                <div class="none" style="padding: 0">
+                    <label for="purchaseCost">purchaseCosts: </label>
+                    <p class="menuText dataField values" id="purchaseCost">
+                    </p>
+                </div>
             </fieldset>
 
         </div><!--menuBarFieldBack values-->
@@ -122,6 +111,8 @@
 
 
     <div class="row middle">
+
+        <div class="row main back">
 
         <form th:action="@{/purchase}" action="#" th:object="${purchaseForm}" method="post">
             <table class="twelve columns" title="Purchase Costs">
@@ -232,9 +223,13 @@
             </table><!--six columns R-->
         </form>
 
+        </div><!--row main back-->
     </div><!--row middle-->
 
 
+    <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
+    </script>
 </div><!--container-->
+
 </body>
 </html>

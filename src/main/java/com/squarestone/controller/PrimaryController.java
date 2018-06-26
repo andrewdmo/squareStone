@@ -70,17 +70,6 @@ public class PrimaryController implements Serializable {
         return "spacedims";
     }
 
-
-    @RequestMapping("/googSample")
-    public String googSample() {
-        return "googSample";
-    }
-
-    @RequestMapping("/googSample2")
-    public String googSample2() {
-        return "googSample2";
-    }
-
     @RequestMapping("/comingSoon")
     public String comingSoon() {
         return "comingSoon";
@@ -108,22 +97,11 @@ public class PrimaryController implements Serializable {
         return "about";
     }
 
-    @RequestMapping("/contact**")
-    public String contact() {
-        return "contact";
-    }
-
-    @RequestMapping("/links**")
-    public String links() {
-        return "links";
-    }
-
     //finish:
     @ExceptionHandler
     public String error(Exception e, Model model) throws Exception {
         model.addAttribute("exception", e.toString());
         return "error";
     }
-
 
 }

@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8"/>
 
-    <title>squareStone Analysis</title>
+    <title>squareStone: Coming Soon!</title>
 
     <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
     <!--preload map, change BODY link too if needed:-->
-    <link rel="preload"
-          th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${gMap}+'&amp;q='+${offAddy}+'&amp;zoom=13'}"
-          href="https://www.google.com/maps/embed/v1/" as="document"/>
+
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -22,8 +20,10 @@
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
 
-    <!--<script type="text/javascript" th:src="@{/scripts/velocity.min.js}" src="/static/scripts/velocity.min.js"></script>-->
-    <script th:src="@{/scripts/viewport.js}" src="../static/scripts/viewport.js"></script>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
 
 </head>
 
@@ -37,54 +37,81 @@
 
 
 <body>
+
 <div class="container">
 
     <div class="row top">
 
-        <div class="four columns profile">
-            <p class="profileText">Back Home</p>
+        <div class="row profile">
 
-            <a th:href="@{/index}" href="index.html" rel="#home">
-                <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
-                     class="profile pic shade"/>
-            </a>
-        </div>
+            <div class="four columns" style="width: fit-content">
+                <p class="profileText">Back Home</p>
 
-        <div class="eight columns name">
-            <a th:href="@{/index}" href="index.html">
-                <h1 class="text shadow link">squareStone</h1></a>
+                <a th:href="@{/index}" href="index.html" rel="#home">
+                    <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
+                         class="profile pic shade"/>
+                </a>
+            </div>
 
-            <a th:href="@{/index}" href="index.html">
-                <h2 class="text shadow link u-pull-left">Commercial Property Analysis
-                </h2></a>
+            <div class="eight columns profile name">
+                <a th:href="@{/index}" href="index.html">
+                    <h1 class="text shadow link">squareStone</h1></a>
 
-        </div>
-        <br/>
+                <a th:href="@{/index}" href="index.html">
+                    <h2 class="text shadow link u-pull-left">Commercial Property Analysis
+                    </h2></a>
+
+            </div><!--NAME-->
+
+            <div id="clock" class="menuBarFieldBack clock">
+            </div><!--CLOCK-->
+            <br/>
+        </div><!--row profile-->
+
+
         <!--CHANGE CURRENT color per page:-->
         <div class="ten columns menuBar">
+
+            <a th:href="@{/home}" href="index.html" rel="#home">
+                <p class="menuText home shadow current">Home
+                </p>
+            </a>
+
             <a th:href="@{/mapping}" href="mapping.html">
-                <p class="text menu shadow none">Mapping
+                <p class="menuText shadow none">Mapping
                 </p>
             </a>
             <a th:href="@{/about}" href="about.html">
-                <p class="text menu shadow none">About
+                <p class="menuText shadow none">About
                 </p>
             </a>
 
-            <a th:href="@{/home}" href="index.html" rel="#home">
-                <p class="text menu home shadow none">Home
-                </p>
-            </a>
-            <!--<p th:text="${#dates.format(#dates.createNow(),'MM/dd/YY HH:mm')}">-->
-            <!--</p>-->
-        </div><!--row two menu-->
 
-    </div><!--row top-->
+        </div><!--row two menuBar-->
+
+        <div class="menuBarFieldBack values">
+            <fieldset style="margin-bottom: 0">
+
+                <div class="none" style="padding: 0">
+                    <!--<legend>Total:</legend>-->
+                    <label for="totalSqFt">totalSqFt: </label>
+                    <p class="menuText dataField values" id="totalSqFt">
+                    </p>
+                </div>
+                <div class="none" style="padding: 0">
+                    <label for="purchaseCost">purchaseCosts: </label>
+                    <p class="menuText dataField values" id="purchaseCost">
+                    </p>
+                </div>
+            </fieldset>
+
+        </div><!--menuBarFieldBack values-->
+
+    </div><!--row TOP-->
 
 
     <div class="row middle">
         <div class="six columns headShotText">
-            <p class="idxText" style="text-decoration: blink">Coming soon!</p>
             <h1 style="text-decoration: blink">Coming soon!</h1>
         </div>
 
@@ -96,20 +123,11 @@
                      src="../static/img/constructionGIF.gif"/>
             </a>
         </div>
-    </div><!--row midButton-->
+    </div><!--row middle-->
 
 
-    <!--&lt;!&ndash;//viewport dims:&ndash;&gt;-->
-    <!--<div class="row testBar">-->
-    <!--<div class="three columns">&lt;!&ndash;at bottom left/right:&ndash;&gt;-->
-    <!--//live .js viewport size:-->
-    <!--<div class="test vw">vw:</div>-->
-    <!--<div class="test vmin">vmin:</div>-->
-    <!--<div class="test vh">vh:</div>-->
-    <!--<div class="test vmax">vmax:</div>-->
-    <!--</div>-->
-    <!--</div>&lt;!&ndash;row testBar&ndash;&gt;-->
-
+    <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
+    </script>
 </div><!--container-->
 
 </body>
