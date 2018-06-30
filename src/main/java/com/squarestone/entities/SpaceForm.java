@@ -33,7 +33,7 @@ public class SpaceForm extends SimpleModule {
     private long commonPercentofTotal2;
 
     //exception if not 100?
-    private long percentSum = tenantPercentOfTotal1 + tenantPercentOfTotal2 + tenantPercentOfTotal3 + tenantPercentOfTotal4;
+    private long percentSum = tenantPercentOfTotal1 + tenantPercentOfTotal2 + tenantPercentOfTotal3 + tenantPercentOfTotal4 + commonPercentofTotal1 + commonPercentofTotal2;
 
 
     private long zeroPercent(long tenantSpace, long totalSpace) throws ArithmeticException {

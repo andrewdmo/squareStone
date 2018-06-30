@@ -97,6 +97,11 @@ public class PrimaryController implements Serializable {
         return "about";
     }
 
+    @RequestMapping("/webStorageTest**")
+    public String webStorageTest() {
+        return "webStorageTest";
+    }
+
     //finish:
     @ExceptionHandler
     public String error(Exception e, Model model) throws Exception {

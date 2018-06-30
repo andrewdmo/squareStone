@@ -5,9 +5,9 @@
 
     <title>Space dimensions</title>
 
-    <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
-    <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
-    <link rel="preload" as="style" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
+    <link rel="preload" th:href="@{/css/normalize.css}" href="../static/css/normalize.css" as="style"/>
+    <link rel="preload" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css" as="style"/>
+    <link rel="preload" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css" as="style"/>
     <!--preload map, change BODY link too if needed:-->
 
 
@@ -20,10 +20,21 @@
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
 
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="preload" th:href="@{scripts/spaceDims.js}" href="../static/scripts/spaceDims.js"
+          as="script"/>
+    <link rel="preload" th:href="@{https://unpkg.com/react/umd/react.development.js}"
+          href="https://unpkg.com/react/umd/react.development.js" as="script"/>
+    <link rel="preload" th:href="@{https://unpkg.com/react-dom/umd/react-dom.development.js}"
+          href="https://unpkg.com/react-dom/umd/react-dom.development.js" as="script"/>
+    <link rel="preload" th:href="@{https://unpkg.com/babel-standalone@6.15.0/babel.min.js}"
+          href="https://unpkg.com/babel-standalone@6.15.0/babel.min.js" as="script"/>
 
+    <script th:src="@{https://unpkg.com/react/umd/react.development.js}"
+            src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script th:src="@{https://unpkg.com/react-dom/umd/react-dom.development.js}"
+            src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script th:src="@{https://unpkg.com/babel-standalone@6.15.0/babel.min.js}"
+            src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
 </head>
 
@@ -113,7 +124,8 @@
 
         <div class="row main back">
 
-            <form th:action="@{/spacedims}" action="#" th:object="${spaceForm}" id="spaceForm" method="post">
+            <form>
+
 
                 <table class="twelve columns" title="Space Dimensions">
                     <thead>
@@ -132,7 +144,7 @@
                     <tbody>
                     <tr>
                         <td>
-                            <fieldset name="totalSqFt">
+                            <fieldset name="totalSqFtTitle">
                                 <legend class="tableHeader h2">Total Sq Footage</legend>
                             </fieldset><!--totalSqFt-->
                         </td>
@@ -147,23 +159,24 @@
                                 <legend class="tableHeader h3">Tenant Space</legend>
 
                                 <label class="tableLabel" for="tenantSpace1">Unit 1</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace1}" id="tenantSpace1"
+                                <input class="tableField" type="text" id="tenantSpace1"
                                        value="0" autofocus="autofocus"/>
 
                                 <label class="tableLabel" for="tenantSpace2">Unit 2</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace2}" id="tenantSpace2"
+                                <input class="tableField" type="text" id="tenantSpace2"
                                        value="0"/>
 
                                 <label class="tableLabel" for="tenantSpace3">Unit 3</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace3}" id="tenantSpace3"
+                                <input class="tableField" type="text" id="tenantSpace3"
                                        value="0"/>
 
                                 <label class="tableLabel" for="tenantSpace4">Unit 4</label>
-                                <input class="tableField" type="text" th:field="*{tenantSpace4}" id="tenantSpace4"
+                                <input class="tableField" type="text" id="tenantSpace4"
                                        value="0"/>
 
+
                                 <label class="tableLabel" for="tenantSqFt">Total Tenant Sq Ft</label>
-                                <code class="tableField" th:text="*{tenantSqFt}" id="tenantSqFt">tenantTotalSqFt</code>
+                                <code class="tableField" id="tenantSqFt">tenantTotalSqFt</code>
 
                             </fieldset><!--tenantSqFt-->
                         </td>
@@ -175,17 +188,15 @@
                             <fieldset name="commonSqFt">
                                 <legend class="tableHeader h3">Common Space</legend>
                                 <label class="tableLabel" for="commonSpace1">Common 1</label>
-                                <input class="tableField" type="text" th:field="*{commonSpace1}" id="commonSpace1"
-                                       th:value="0"
+                                <input class="tableField" type="text" id="commonSpace1"
                                        value="0"/>
 
                                 <label class="tableLabel" for="commonSpace2">Common 2</label>
-                                <input class="tableField" type="text" th:field="*{commonSpace2}" id="commonSpace2"
-                                       th:value="0"
+                                <input class="tableField" type="text" id="commonSpace2"
                                        value="0"/>
 
                                 <label class="tableLabel" for="commonSqFt">Total Common Sq Ft</label>
-                                <code class="tableField" th:text="*{commonSqFt}" id="commonSqFt">commonTotalSqFt</code>
+                                <code class="tableField" id="commonSqFt">commonTotalSqFt</code>
 
                             </fieldset><!--commonSqFt-->
                         </td>
@@ -198,22 +209,18 @@
                                 <fieldset>
 
 
-                                    <label class="tablelabel" for="tenantPercentOfTotal1">Unit 1
-                                        <code class="tableField" th:text="*{tenantPercentOfTotal1}"
-                                              id="tenantPercentOfTotal1">tenantPercentOfTotal1</code>
-                                    </label>
+                                    <label class="tablelabel" for="tenantPercentOfTotal1">Unit 1</label>
+
+                                    <code class="tableField" id="tenantPercentOfTotal1">tenantPercentOfTotal1</code>
 
                                     <label class="tablelabel" for="tenantPercentOfTotal2">Unit 2</label>
-                                    <code class="tableField" th:text="*{tenantPercentOfTotal2}"
-                                          id="tenantPercentOfTotal2">tenantPercentOfTotal2</code>
+                                    <code class="tableField" id="tenantPercentOfTotal2">tenantPercentOfTotal2</code>
 
                                     <label class="tablelabel" for="tenantPercentOfTotal3">Unit 3</label>
-                                    <code class="tableField" th:text="*{tenantPercentOfTotal3}"
-                                          id="tenantPercentOfTotal3">tenantPercentOfTotal3</code>
+                                    <code class="tableField" id="tenantPercentOfTotal3">tenantPercentOfTotal3</code>
 
                                     <label class="tablelabel" for="tenantPercentOfTotal4">Unit 4</label>
-                                    <code class="tableField" th:text="*{tenantPercentOfTotal4}"
-                                          id="tenantPercentOfTotal4">tenantPercentOfTotal4</code>
+                                    <code class="tableField" id="tenantPercentOfTotal4">tenantPercentOfTotal4</code>
 
                                 </fieldset>
 
@@ -221,12 +228,10 @@
                                     <legend class="tableHeader h3">Common Space</legend>
 
                                     <label class="tablelabel" for="commonPercentofTotal1">Common 1</label>
-                                    <code class="tableField" th:text="*{commonPercentofTotal1}"
-                                          id="commonPercentofTotal1">common%total1</code>
+                                    <code class="tableField" id="commonPercentofTotal1">common%total1</code>
 
                                     <label class="tablelabel" for="commonPercentofTotal2">Common 2</label>
-                                    <code class="tableField" th:text="*{commonPercentofTotal2}"
-                                          id="commonPercentofTotal2">common%total</code>
+                                    <code class="tableField" id="commonPercentofTotal2">common%total</code>
 
                                 </fieldset>
                             </fieldset><!--percentOfTotal-->
@@ -235,20 +240,16 @@
                                 <legend class="tableHeader h3">% of Tenant-Only Sq Ft</legend>
 
                                 <label class="tablelabel" for="tenantOnlyPercent1">Unit 1:</label>
-                                <code class="tableField" th:text="*{tenantOnlyPercent1}"
-                                      id="tenantOnlyPercent1">tenantOnly%1</code>
+                                <code class="tableField" id="tenantOnlyPercent1">tenantOnly%1</code>
 
                                 <label class="tablelabel" for="tenantOnlyPercent2">Unit 2:</label>
-                                <code class="tableField" th:text="*{tenantOnlyPercent2}"
-                                      id="tenantOnlyPercent2">tenantOnly%2</code>
+                                <code class="tableField" id="tenantOnlyPercent2">tenantOnly%2</code>
 
                                 <label class="tablelabel" for="tenantOnlyPercent3">Unit 3:</label>
-                                <code class="tableField" th:text="*{tenantOnlyPercent1}"
-                                      id="tenantOnlyPercent3">tenantOnly%3</code>
+                                <code class="tableField" id="tenantOnlyPercent3">tenantOnly%3</code>
 
                                 <label class="tablelabel" for="tenantOnlyPercent4">Unit 4:</label>
-                                <code class="tableField" th:text="*{tenantOnlyPercent4}"
-                                      id="tenantOnlyPercent4">tenantOnly%4</code>
+                                <code class="tableField" id="tenantOnlyPercent4">tenantOnly%4</code>
 
 
                             </fieldset><!--tenantOnlyPercent-->
@@ -264,7 +265,7 @@
                     </tr>
 
                     <tr>
-                        <td colspan="2"><input class="button" type="submit" value="Submit"/></td>
+                        <td colspan="2"><input class="button" id="spaceFormSubmit" type="submit" value="Submit"/></td>
                     </tr>
 
                     </tbody>
@@ -275,6 +276,8 @@
 
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
+    <script th:src="@{/scripts/spaceDims.js}" src="../static/scripts/spaceDims.js"></script>
+
 </div><!--container-->
 
 </body>
