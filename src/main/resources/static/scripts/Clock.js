@@ -1,3 +1,5 @@
+import React from 'react'; //needed?
+
 class Clock extends React.Component {
 
     constructor(props) {

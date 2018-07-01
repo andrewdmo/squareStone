@@ -20,7 +20,7 @@
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
 
-    <link rel="preload" th:href="@{scripts/spaceDims.js}" href="../static/scripts/spaceDims.js"
+    <link rel="preload" th:href="@{scripts/SpaceDims.js}" href="../static/scripts/SpaceDims.js"
           as="script"/>
     <link rel="preload" th:href="@{https://unpkg.com/react/umd/react.development.js}"
           href="https://unpkg.com/react/umd/react.development.js" as="script"/>
@@ -176,7 +176,7 @@
 
 
                                 <label class="tableLabel" for="tenantSqFt">Total Tenant Sq Ft</label>
-                                <code class="tableField" id="tenantSqFt">tenantTotalSqFt</code>
+                                <code class="tableField" id="tenantSqFt"></code>
 
                             </fieldset><!--tenantSqFt-->
                         </td>
@@ -265,7 +265,8 @@
                     </tr>
 
                     <tr>
-                        <td colspan="2"><input class="button" id="spaceFormSubmit" type="submit" value="Submit"/></td>
+                        <td colspan="2"><input class="button" id="spaceFormSubmit" type="submit"
+                                               value="Submit"/></td>
                     </tr>
 
                     </tbody>
@@ -274,9 +275,8 @@
         </div><!--row main back-->
     </div><!--row middle-->
 
-    <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
-    </script>
-    <script th:src="@{/scripts/spaceDims.js}" src="../static/scripts/spaceDims.js"></script>
+    <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js"></script>
+    <script type="text/babel" th:src="@{/scripts/SpaceDims.js}" src="../static/scripts/SpaceDims.js"></script>
 
 </div><!--container-->
 

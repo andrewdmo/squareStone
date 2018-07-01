@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e40d45d9-b015-4492-97de-f7217c7ce821" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/spaceDims.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/storeValues.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/spaceDims.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/SpaceDims.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/spacedimsOLD.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/spacedimsOLD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scripts/spaceDims.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scripts/spaceDims.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/spacedims.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/spacedims.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/spacedimsOLD.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/spacedimsOLD.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -29,7 +29,7 @@
           <file leaf-file-name="PrimaryController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
+                <state relative-caret-position="1230">
                   <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -53,18 +53,10 @@
           <file leaf-file-name="SpaceForm.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="92">
+                <state relative-caret-position="300">
                   <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#5831#5832#0" expanded="true" />
-                    <element signature="e#5891#5892#0" expanded="true" />
-                    <element signature="e#6114#6115#0" expanded="true" />
-                    <element signature="e#6174#6175#0" expanded="true" />
-                    <element signature="e#6397#6398#0" expanded="true" />
-                    <element signature="e#6457#6458#0" expanded="true" />
-                    <element signature="e#6680#6681#0" expanded="true" />
-                    <element signature="e#6740#6741#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -73,8 +65,8 @@
           <file leaf-file-name="spacedims.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/spacedims.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="115">
-                  <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+                <state relative-caret-position="-1857">
+                  <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
                 </state>
               </provider>
             </entry>
@@ -82,8 +74,8 @@
           <file leaf-file-name="Clock.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/Clock.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="585">
-                  <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -91,8 +83,8 @@
           <file leaf-file-name="webStorageTest.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webStorageTest.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-202">
-                  <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+                <state relative-caret-position="585">
+                  <caret line="39" selection-start-line="39" selection-end-line="39" />
                 </state>
               </provider>
             </entry>
@@ -109,8 +101,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-254">
-                  <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
                   <folding>
                     <element signature="n#style#0;n#fieldset#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -147,8 +139,8 @@
           <file leaf-file-name="spacedimsOLD.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/spacedimsOLD.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+                <state relative-caret-position="4485">
+                  <caret line="299" selection-start-line="299" selection-end-line="299" />
                 </state>
               </provider>
             </entry>
@@ -157,7 +149,7 @@
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="360">
-                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
                 </state>
               </provider>
             </entry>
@@ -166,7 +158,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+                  <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -180,11 +172,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="spaceDims.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/spaceDims.js">
+          <file leaf-file-name="SpaceDims.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/SpaceDims.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+                <state relative-caret-position="1253">
+                  <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -205,7 +197,7 @@
           <file leaf-file-name="sqStStyle.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/sqStStyle.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
+                <state relative-caret-position="3615">
                   <caret line="241" column="21" selection-start-line="241" selection-start-column="21" selection-end-line="241" selection-end-column="21" />
                 </state>
               </provider>
@@ -214,8 +206,8 @@
           <file leaf-file-name="webStorageTest.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/webStorageTest.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -228,12 +220,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="AnnotationType" />
+        <option value="package_json" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>blink</find>
       <find>tr</find>
       <find>body</find>
       <find>testbar</find>
@@ -263,6 +255,7 @@
       <find>h1</find>
       <find>opacity</find>
       <find>main text</find>
+      <find>package</find>
     </findStrings>
     <replaceStrings>
       <replace>a</replace>
@@ -273,6 +266,9 @@
       <replace>totalSqFt</replace>
       <replace>zeroPercent</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -294,7 +290,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/squarestone/services/GMap.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/services/mapService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/googSample2.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/DotBeta.java" />
@@ -343,8 +338,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/webStorageTest.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/webStorageTest.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/storeSpaceDimValues.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/spaceDims.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/spacedims.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/scripts/SpaceDims.js" />
       </list>
     </option>
   </component>
@@ -398,7 +394,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -524,6 +519,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -758,11 +754,14 @@
       <workItem from="1529956243921" duration="3001000" />
       <workItem from="1530045109861" duration="2761000" />
       <workItem from="1530057927632" duration="15003000" />
+      <workItem from="1530359465573" duration="1721000" />
+      <workItem from="1530385751539" duration="2769000" />
+      <workItem from="1530448142002" duration="2487000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="259945000" />
+    <option name="totallyTimeSpent" value="266922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -787,13 +786,13 @@
       <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.27222222" weight="0.38915095" />
       <window_info id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3293124" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6409722" side_tool="true" weight="0.2783019" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6409722" side_tool="true" visible="true" weight="0.21226415" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49427754" weight="0.3256936" />
       <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.55722463" weight="0.2249093" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45207438" weight="0.32810616" />
       <window_info anchor="right" auto_hide="true" id="Jenkins" internal_type="SLIDING" order="15" show_stripe_button="false" type="SLIDING" weight="0.32403433" />
       <window_info anchor="bottom" id="Problems" order="21" sideWeight="0.41130185" weight="0.1535671" />
-      <window_info content_ui="combo" x="21" y="32" width="311" height="812" id="Project" order="5" sideWeight="0.4885404" visible="true" weight="0.07083333" />
+      <window_info active="true" content_ui="combo" x="21" y="32" width="311" height="812" id="Project" order="5" sideWeight="0.4885404" visible="true" weight="0.06736111" />
       <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
       <window_info id="Web" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.35902777" weight="0.2783019" />
@@ -805,20 +804,20 @@
       <window_info id="Leiningen" order="6" weight="0.3295129" />
       <window_info anchor="right" x="100" y="123" width="1240" height="617" id="Documentation" order="10" type="FLOATING" />
       <window_info anchor="bottom" id="Dependency Viewer" order="25" weight="0.32900944" />
-      <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info id="Nl-Palette" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="HDInsight Spark Submission" order="17" show_stripe_button="false" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.328125" />
       <window_info anchor="right" id="Data View" order="16" />
-      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info id="Capture Tool" order="1" />
       <window_info anchor="bottom" id="Database Console" order="20" sideWeight="0.49713877" weight="0.3293124" />
       <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.5665236" weight="0.32810616" />
       <window_info anchor="right" id="SciView" order="17" />
       <window_info anchor="right" id="Remote Host" order="14" weight="0.3297568" />
       <window_info id="Image Layers" order="9" />
-      <window_info id="Capture Tool" order="1" />
+      <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Duplicates" order="24" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
@@ -830,14 +829,14 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Thumbnails" order="23" sideWeight="0.49928468" weight="0.32889965" />
-      <window_info anchor="right" id="SvgViewer" order="0" />
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.39791667" weight="0.25353774" />
       <window_info anchor="right" id="Designer" order="7" />
       <window_info anchor="bottom" id="Amazon EC2" order="15" sideWeight="0.2732475" weight="0.35102534" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.4620887" weight="0.2962515" />
+      <window_info id="Leiningen" order="6" weight="0.3295129" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Duplicates" order="24" />
       <window_info anchor="right" id="Remote Host" order="14" weight="0.3297568" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.4620887" weight="0.2962515" />
       <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.55722463" weight="0.2249093" />
       <window_info anchor="bottom" id="Database Console" order="20" sideWeight="0.49713877" weight="0.3293124" />
       <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6402778" side_tool="true" visible="true" weight="0.2783019" />
@@ -845,49 +844,49 @@
       <window_info anchor="right" id="Ant Build" order="3" weight="0.24964234" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info id="Web" order="11" side_tool="true" />
+      <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
       <window_info anchor="right" id="Properties" order="12" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45207438" weight="0.32810616" />
       <window_info anchor="bottom" id="Docker" order="26" weight="0.32900944" />
-      <window_info anchor="right" x="100" y="123" width="1240" height="617" id="Documentation" order="10" type="FLOATING" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
       <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.5665236" weight="0.32810616" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
-      <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.7153076" side_tool="true" weight="0.27004716" />
-      <window_info anchor="right" id="Mongo Explorer" order="18" weight="0.18541667" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.27222222" weight="0.38915095" />
+      <window_info anchor="bottom" id="TODO" order="4" sideWeight="0.49444443" weight="0.31882352" />
+      <window_info anchor="right" x="100" y="123" width="1240" height="617" id="Documentation" order="10" type="FLOATING" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="25" weight="0.32900944" />
-      <window_info anchor="right" x="1238" y="527" width="177" height="317" id="Database" order="11" sideWeight="0.47678572" weight="0.11874106" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.35972223" weight="0.2783019" />
       <window_info anchor="bottom" id="Problems" order="21" sideWeight="0.41130185" weight="0.1535671" />
       <window_info id="Image Layers" order="9" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3293124" />
       <window_info anchor="right" id="Theme Preview" order="13" />
-      <window_info anchor="bottom" id="Database Changes" order="22" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="25" weight="0.32900944" />
       <window_info anchor="right" id="Data View" order="16" />
+      <window_info anchor="right" id="Mongo Explorer" order="18" weight="0.18541667" />
       <window_info id="Nl-Palette" order="8" />
       <window_info anchor="right" x="1059" y="211" width="337" height="295" id="Maven Projects" order="6" weight="0.12638889" />
       <window_info anchor="bottom" id="HDInsight Spark Submission" order="17" show_stripe_button="false" />
-      <window_info anchor="right" auto_hide="true" id="Jenkins" internal_type="SLIDING" order="15" show_stripe_button="false" type="SLIDING" weight="0.32403433" />
-      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
-      <window_info id="JavaEE:App" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Fluid" order="19" side_tool="true" />
+      <window_info anchor="bottom" x="599" y="165" width="212" height="487" id="Structure" order="10" sideWeight="0.5214592" side_tool="true" weight="0.3293124" />
+      <window_info anchor="bottom" id="Database Changes" order="22" show_stripe_button="false" />
       <window_info active="true" content_ui="combo" x="21" y="32" width="311" height="812" id="Project" order="5" sideWeight="0.4885404" visible="true" weight="0.15972222" />
       <window_info anchor="right" id="SciView" order="17" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.27222222" weight="0.38915095" />
+      <window_info anchor="right" x="1238" y="527" width="177" height="317" id="Database" order="11" sideWeight="0.47678572" weight="0.11874106" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Leiningen" order="6" weight="0.3295129" />
-      <window_info anchor="bottom" id="TODO" order="4" sideWeight="0.49444443" weight="0.31882352" />
+      <window_info id="JavaEE:App" order="0" side_tool="true" />
+      <window_info id="Web" order="11" side_tool="true" />
       <window_info id="Palette&#9;" order="3" />
-      <window_info id="Favorites" order="4" sideWeight="0.5114596" side_tool="true" weight="0.080829754" />
+      <window_info anchor="right" auto_hide="true" id="Jenkins" internal_type="SLIDING" order="15" show_stripe_button="false" type="SLIDING" weight="0.32403433" />
       <window_info id="Azure Explorer" order="10" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49427754" weight="0.3256936" />
       <window_info id="Colour Chooser" order="12" />
-      <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
-      <window_info anchor="bottom" x="599" y="165" width="212" height="487" id="Structure" order="10" sideWeight="0.5214592" side_tool="true" weight="0.3293124" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.328125" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.35972223" weight="0.2783019" />
       <window_info anchor="bottom" id="Azure Activity Log" order="18" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.328125" />
+      <window_info id="Favorites" order="4" sideWeight="0.5114596" side_tool="true" weight="0.080829754" />
+      <window_info anchor="bottom" id="Fluid" order="19" side_tool="true" />
+      <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
+      <window_info anchor="right" id="SvgViewer" order="0" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -905,7 +904,7 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="14" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1076,7 +1075,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/spaceDims.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/SpaceDims.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/topJS.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/react.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1143,25 +1142,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/sqStStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="3615">
           <caret line="241" column="21" selection-start-line="241" selection-start-column="21" selection-end-line="241" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/SpaceForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="300">
           <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5831#5832#0" expanded="true" />
-            <element signature="e#5891#5892#0" expanded="true" />
-            <element signature="e#6114#6115#0" expanded="true" />
-            <element signature="e#6174#6175#0" expanded="true" />
-            <element signature="e#6397#6398#0" expanded="true" />
-            <element signature="e#6457#6458#0" expanded="true" />
-            <element signature="e#6680#6681#0" expanded="true" />
-            <element signature="e#6740#6741#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1169,20 +1160,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
+        <state relative-caret-position="1230">
           <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1195,8 +1186,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state relative-caret-position="255">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#fieldset#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#fieldset#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1206,43 +1197,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/webStorageTest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        <state relative-caret-position="585">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/spacedimsOLD.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="299" lean-forward="true" selection-start-line="299" selection-end-line="299" />
+        <state relative-caret-position="4485">
+          <caret line="299" selection-start-line="299" selection-end-line="299" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/webStorageTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        <state relative-caret-position="270">
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/Clock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/spaceDims.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="120">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/spacedims.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
+        <state relative-caret-position="-1857">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/SpaceDims.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1253">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
         </state>
       </provider>
     </entry>
