@@ -1,5 +1,3 @@
-import React from 'react'; //needed?
-
 class Clock extends React.Component {
 
     constructor(props) {
@@ -28,9 +26,7 @@ class Clock extends React.Component {
 
     render() {
         return (
-            <div>
-                <p class="menuText dataField">{this.state.date.toLocaleString()}</p>
-            </div>
+            <p className="menuText dataField">{this.state.date.toLocaleString()}</p>
         );
 
     }

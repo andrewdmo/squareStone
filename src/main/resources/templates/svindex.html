@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
 
-    <title>squareStone Analysis</title>
+    <title>Spartan Trash Valet, LLC &#8211; Door-to-door trash valets</title>
 
     <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
@@ -13,16 +13,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
-          content="commercial, estimating, asheville, nc, north carolina"/>
-    <meta name="description" content="SS"/>
+          content="commercial, valet, trash, garbage, service, apartment, ga, georgia, nc, north carolina"/>
+    <meta name="description" content="SV"/>
     <meta name="robots" content="index,follow"/>
     <link rel="stylesheet" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
-    <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
+    <link rel="stylesheet" th:href="@{/css/svStyle.css}" href="../static/css/svStyle.css"/>
 
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <!--OLD:-->
+    <!--<script src="https://unpkg.com/react/umd/react.development.js"></script>-->
+    <!--<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>-->
+    <!--<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>-->
+
+    <script src="https://unpkg.com/react@15.4.1/dist/react-with-addons.js"></script>
+    <script src="https://unpkg.com/react-dom@15.4.1/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.19.0/babel.min.js"></script>
 
 
 </head>
@@ -45,20 +50,20 @@
         <div class="row profile">
 
             <div class="four columns" style="width: fit-content">
-                <p class="profileText">Back Home</p>
+                <!--<p class="profileText">Back Home</p>-->
 
                 <a th:href="@{/index}" href="index.html" rel="#home">
-                    <img th:src="@{img/squareStone.jpg}" src="../static/img/squareStone.jpg"
-                         class="profile pic shade"/>
+                    <img th:src="@{img/spartanLogo.png}" src="../static/img/spartanLogo.png"
+                         class="profile pic shadow"/>
                 </a>
             </div>
 
             <div class="eight columns profile name">
                 <a th:href="@{/index}" href="index.html">
-                    <h1 class="text shadow link">squareStone</h1></a>
+                    <h1 class="text shadow link">Door-to-Door Trash Valet Services</h1></a>
 
                 <a th:href="@{/index}" href="index.html">
-                    <h2 class="text shadow link u-pull-left">Commercial Property Analysis
+                    <h2 class="text shadow link u-pull-left">Spartan Trash Valet, LLC
                     </h2></a>
 
             </div><!--NAME-->
@@ -89,23 +94,23 @@
 
         </div><!--row two menuBar-->
 
-        <div class="menuBarFieldBack values">
-            <fieldset style="margin-bottom: 0">
+        <!--<div class="menuBarFieldBack values">-->
+        <!--<fieldset style="margin-bottom: 0">-->
 
-                <div class="none" style="padding: 0">
-                    <!--<legend>Total:</legend>-->
-                    <label for="totalSqFt">totalSqFt: </label>
-                    <p class="menuText dataField values" id="totalSqFt">
-                    </p>
-                </div>
-                <div class="none" style="padding: 0">
-                    <label for="purchaseCost">purchaseCosts: </label>
-                    <p class="menuText dataField values" id="purchaseCost">
-                    </p>
-                </div>
-            </fieldset>
+        <!--<div class="none" style="padding: 0">-->
+        <!--&lt;!&ndash;<legend>Total:</legend>&ndash;&gt;-->
+        <!--<label for="totalSqFt">totalSqFt: </label>-->
+        <!--<p class="menuText dataField values" id="totalSqFt">-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--<div class="none" style="padding: 0">-->
+        <!--<label for="purchaseCost">purchaseCosts: </label>-->
+        <!--<p class="menuText dataField values" id="purchaseCost">-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</fieldset>-->
 
-        </div><!--menuBarFieldBack values-->
+        <!--</div>&lt;!&ndash;menuBarFieldBack values&ndash;&gt;-->
 
     </div><!--row TOP-->
 
@@ -115,13 +120,13 @@
         <div class="row main back">
             <div class="twelve columns main text">
                 <p class="index1">
-                    Behold the world's finest Analysis Engine for Commercial Properties.
+                    We are here to serve your community!
                 </p>
+                <br/>
                 <p class="index2">
-                    The oft-dreamt tool of architects, builders, and investors alike is here
-                    [in
-                    beta].
-                </p>
+                    Trash valet service has been voted by multi-family residents as the top value-added amenity. We'll
+                    bring this service to your residents by providing door-to-door trash pickup 5 days per week. Our
+                    professional staff will ensure that your community stays clean and clear of trash debris.</p>
             </div>
             <!--<td>-->
             <!--<a th:href="@{/about}" href="about.html">-->
@@ -165,10 +170,25 @@
         </div><!--row main back-->
     </div><!--row middle-->
 
+    <!--//viewport dims:-->
+    <div class="row testBar">
+        <div class="three columns"><!--at bottom left/right:-->
+            Desktop: drag browser corner to resize window:
+            <!--<div class="test vw">vw:</div>-->
+            <!--<div class="test vmin">vmin:</div>-->
+            <!--<div class="test vh">vh:</div>-->
+            <!--<div class="test vmax">vmax:</div>-->
+        </div>
+    </div><!--row testBar-->
 
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
+
+
 </div><!--container-->
 
 </body>
 </html>
+
+
+

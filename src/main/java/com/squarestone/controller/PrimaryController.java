@@ -102,6 +102,11 @@ public class PrimaryController implements Serializable {
         return "webStorageTest";
     }
 
+    @GetMapping(value = {"/sv", "spartan"})
+    public String spartanValet() {
+        return "svindex";
+    }
+
     //finish:
     @ExceptionHandler
     public String error(Exception e, Model model) throws Exception {

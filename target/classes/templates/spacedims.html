@@ -20,7 +20,7 @@
     <link rel="stylesheet" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
     <link rel="stylesheet" th:href="@{/css/sqStStyle.css}" href="../static/css/sqStStyle.css"/>
 
-    <link rel="preload" th:href="@{scripts/SpaceDims.js}" href="../static/scripts/SpaceDims.js"
+    <link rel="preload" th:href="@{scripts/SpaceDim.js}" href="../static/scripts/SpaceDim.js"
           as="script"/>
     <link rel="preload" th:href="@{https://unpkg.com/react/umd/react.development.js}"
           href="https://unpkg.com/react/umd/react.development.js" as="script"/>
@@ -120,163 +120,17 @@
 
     </div><!--row TOP-->
 
+
     <div id="middle" class="row middle">
 
-        <div class="row main back">
-
-            <form>
+        <div class="row main back" id="spaceDimForm">
 
 
-                <table class="twelve columns" title="Space Dimensions">
-                    <thead>
-
-                    <tr>
-                        <th colspan="2">
-                            <h1 class="tableHeader">Space Dimensions</h1>
-                        </th>
-                    </tr>
-
-                    </thead>
-
-
-                    <!--ROW 1-->
-
-                    <tbody>
-                    <tr>
-                        <td>
-                            <fieldset name="totalSqFtTitle">
-                                <legend class="tableHeader h2">Total Sq Footage</legend>
-                            </fieldset><!--totalSqFt-->
-                        </td>
-
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <!--for loop later:-->
-                            <fieldset name="tenantSqFt">
-                                <legend class="tableHeader h3">Tenant Space</legend>
-
-                                <label class="tableLabel" for="tenantSpace1">Unit 1</label>
-                                <input class="tableField" type="text" id="tenantSpace1"
-                                       value="0" autofocus="autofocus"/>
-
-                                <label class="tableLabel" for="tenantSpace2">Unit 2</label>
-                                <input class="tableField" type="text" id="tenantSpace2"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="tenantSpace3">Unit 3</label>
-                                <input class="tableField" type="text" id="tenantSpace3"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="tenantSpace4">Unit 4</label>
-                                <input class="tableField" type="text" id="tenantSpace4"
-                                       value="0"/>
-
-
-                                <label class="tableLabel" for="tenantSqFt">Total Tenant Sq Ft</label>
-                                <code class="tableField" id="tenantSqFt"></code>
-
-                            </fieldset><!--tenantSqFt-->
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-
-                            <fieldset name="commonSqFt">
-                                <legend class="tableHeader h3">Common Space</legend>
-                                <label class="tableLabel" for="commonSpace1">Common 1</label>
-                                <input class="tableField" type="text" id="commonSpace1"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="commonSpace2">Common 2</label>
-                                <input class="tableField" type="text" id="commonSpace2"
-                                       value="0"/>
-
-                                <label class="tableLabel" for="commonSqFt">Total Common Sq Ft</label>
-                                <code class="tableField" id="commonSqFt">commonTotalSqFt</code>
-
-                            </fieldset><!--commonSqFt-->
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <fieldset name="percentOfTotal">
-                                <legend class="tableHeader h3">% of Total Sq Ft</legend>
-                                <fieldset>
-
-
-                                    <label class="tablelabel" for="tenantPercentOfTotal1">Unit 1</label>
-
-                                    <code class="tableField" id="tenantPercentOfTotal1">tenantPercentOfTotal1</code>
-
-                                    <label class="tablelabel" for="tenantPercentOfTotal2">Unit 2</label>
-                                    <code class="tableField" id="tenantPercentOfTotal2">tenantPercentOfTotal2</code>
-
-                                    <label class="tablelabel" for="tenantPercentOfTotal3">Unit 3</label>
-                                    <code class="tableField" id="tenantPercentOfTotal3">tenantPercentOfTotal3</code>
-
-                                    <label class="tablelabel" for="tenantPercentOfTotal4">Unit 4</label>
-                                    <code class="tableField" id="tenantPercentOfTotal4">tenantPercentOfTotal4</code>
-
-                                </fieldset>
-
-                                <fieldset>
-                                    <legend class="tableHeader h3">Common Space</legend>
-
-                                    <label class="tablelabel" for="commonPercentofTotal1">Common 1</label>
-                                    <code class="tableField" id="commonPercentofTotal1">common%total1</code>
-
-                                    <label class="tablelabel" for="commonPercentofTotal2">Common 2</label>
-                                    <code class="tableField" id="commonPercentofTotal2">common%total</code>
-
-                                </fieldset>
-                            </fieldset><!--percentOfTotal-->
-
-                            <fieldset name="tenantOnlyPercent">
-                                <legend class="tableHeader h3">% of Tenant-Only Sq Ft</legend>
-
-                                <label class="tablelabel" for="tenantOnlyPercent1">Unit 1:</label>
-                                <code class="tableField" id="tenantOnlyPercent1">tenantOnly%1</code>
-
-                                <label class="tablelabel" for="tenantOnlyPercent2">Unit 2:</label>
-                                <code class="tableField" id="tenantOnlyPercent2">tenantOnly%2</code>
-
-                                <label class="tablelabel" for="tenantOnlyPercent3">Unit 3:</label>
-                                <code class="tableField" id="tenantOnlyPercent3">tenantOnly%3</code>
-
-                                <label class="tablelabel" for="tenantOnlyPercent4">Unit 4:</label>
-                                <code class="tableField" id="tenantOnlyPercent4">tenantOnly%4</code>
-
-
-                            </fieldset><!--tenantOnlyPercent-->
-                        </td>
-                    </tr><!--1st row-->
-
-                    <tr>
-                        <!--<td colspan="2">-->
-                        <!--<p class="menuText dataField" style="float: left" id="totalSqFt"-->
-                        <!--th:script="getCookie(totalSqFt)"-->
-                        <!--th:text="'totalSqFt: '">totalSqFt</p>-->
-                        <!--</td>-->
-                    </tr>
-
-                    <tr>
-                        <td colspan="2"><input class="button" id="spaceFormSubmit" type="submit"
-                                               value="Submit"/></td>
-                    </tr>
-
-                    </tbody>
-                </table><!--six columns R-->
-            </form>
         </div><!--row main back-->
     </div><!--row middle-->
 
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js"></script>
-    <script type="text/babel" th:src="@{/scripts/SpaceDims.js}" src="../static/scripts/SpaceDims.js"></script>
+    <script type="text/babel" th:src="@{/scripts/SpaceDim.js}" src="../static/scripts/SpaceDim.js"></script>
 
 </div><!--container-->
 
