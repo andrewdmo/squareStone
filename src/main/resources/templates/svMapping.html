@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
 
-    <title>Spartan Trash Valet, LLC &#8211; Door-to-door trash valets</title>
+    <title>Spartan Mapping</title>
 
     <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
@@ -52,7 +52,7 @@
             <div class="four columns" style="width: fit-content">
                 <!--<p class="profileText">Back Home</p>-->
 
-                <a th:href="@{/index}" href="index.html" rel="#home">
+                <a th:href="@{/svIndex}" href="svIndex.html" rel="#home">
                     <img th:src="@{img/spartanLogo.png}" src="../static/img/spartanLogo.png"
                          class="profile pic shadow"/>
                 </a>
@@ -118,70 +118,92 @@
     <div class="row middle">
 
         <div class="row main back">
-            <div class="six columns main text">
-                <p class="index1">
-                    We are here to serve your community!
-                </p>
-                <br/>
-                <p class="index2">
-                    Trash valet service has been voted by multi-family residents as the top value-added amenity. We'll
-                    bring this service to your residents by providing door-to-door trash pickup 5 days per week. Our
-                    professional staff will ensure that your community stays clean and clear of trash debris.</p>
-            </div>
-            <div class="six columns main">
-                <img th:src="@{img/spartanAptBckgrdSm.jpg}" src="../static/img/spartanAptBckgrdSm.jpg"
-                     class="profile pic shadow"/>
+            <div class="twelve columns">
+                <form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">
+                    <table>
+                        <!--<tr class="none">-->
+                        <!--<th style="background: #8d8a7e">-->
+                        <!--<h1 class="tableHeader">-->
+                        <!--Map a property:-->
+                        <!--</h1>-->
+                        <!--</th>-->
+                        <!--</tr>-->
+                        <tr class="none">
+                            <td class="tableLabel row">
+                                <label class="tableLabel" for="gaddy">Address:</label>
+                                <input type="text" th:field="*{gaddy}" id="gaddy" class="tableField"
+                                       placeholder="[search feature pending]"/>
+                            </td>
+                        </tr>
+                        <tr class="none">
+                            <td>
+                                <input type="submit" class="button" value="Submit"/>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
             </div>
 
 
-            <!--BUTTONS/TABS:-->
-            <div class="six columns main text">
-                <a th:href="@{/purchase}" href="purchase.html">
-                    <button>
-                        Purchase Costs
-                    </button>
-                </a>
-            </div>
-            <div class="six columns main text">
-                <a th:href="@{/comingSoon}" href="comingSoon.html">
-                    <button>
-                        Revenue
-                    </button>
-                </a>
-            </div>
+            <div id="autoMap">
+            </div><!--map-->
 
 
-            <div class="six columns main text">
-                <a th:href="@{/spacedims}" href="spacedimsOLD.html">
-                    <button>
-                        Space Dimensions
-                    </button>
-                </a>
-            </div>
+            <br/>
+            <!--DRAWN MAP:-->
+            <div class="twelve columns mapArea topMarg">
+                <!--preload map above, change HEAD link too if needed:-->
+                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                        th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
+                        src="https://www.google.com/maps/embed/v1/">
 
-            <div class="six columns main text">
-                <a th:href="@{/comingSoon}" href="comingSoon.html">
-                    <button>
-                        Operating Costs
-                    </button>
-                </a>
-            </div>
+                    <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
+
+                </iframe>
+            </div><!--map-->
+
+            <!--OVERHEAD SAT:-->
+            <div class="twelve columns mapArea">
+                <!--preload map above, change HEAD link too if needed:-->
+                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                        th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;center=35.9657642,-78.9567109&amp;zoom=13&amp;maptype=satellite'}"
+                        src="https://www.google.com/maps/embed/v1/">
+
+                </iframe>
+            </div><!--map-->
+
+            <!--STREETVIEW:-->
+            <div class="twelve columns mapArea">
+                <!--preload map above, change HEAD link too if needed:-->
+                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                        th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
+                        src="https://www.google.com/maps/embed/v1/">
+
+                    <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
+
+                </iframe>
+            </div><!--map-->
         </div><!--row main back-->
     </div><!--row middle-->
 
-    <!--//viewport dims:-->
-    <div class="row testBar">
-        <div class="three columns"><!--at bottom left/right:-->
-            Desktop: drag corner to resize
-            <!--<div class="test vw">vw:</div>-->
-            <!--<div class="test vmin">vmin:</div>-->
-            <!--<div class="test vh">vh:</div>-->
-            <!--<div class="test vmax">vmax:</div>-->
-        </div>
-    </div><!--row testBar-->
+    <!--&lt;!&ndash;//viewport dims:&ndash;&gt;-->
+    <!--<div class="row testBar">-->
+    <!--<div class="three columns">&lt;!&ndash;at bottom left/right:&ndash;&gt;-->
+    <!--Desktop: drag corner to resize-->
+    <!--&lt;!&ndash;<div class="test vw">vw:</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="test vmin">vmin:</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="test vh">vh:</div>&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="test vmax">vmax:</div>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</div>&lt;!&ndash;row testBar&ndash;&gt;-->
 
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
+
+    <!--<script async defer-->
+    <!--src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">-->
+    <!--</script>-->
 
 
 </div><!--container-->

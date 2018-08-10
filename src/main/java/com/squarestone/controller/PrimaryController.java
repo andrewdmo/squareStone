@@ -102,9 +102,14 @@ public class PrimaryController implements Serializable {
         return "webStorageTest";
     }
 
-    @GetMapping(value = {"/sv", "spartan"})
+    @GetMapping(value = {"/sv", "/spartan", "svIndex"})
     public String spartanValet() {
-        return "svindex";
+        return "svIndex";
+    }
+
+    @GetMapping(value = {"/svMap", "/svMapping"})
+    public String spartanMapping() {
+        return "svMapping";
     }
 
     //finish:
