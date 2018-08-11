@@ -135,8 +135,16 @@
             <br/>
             <!--DRAWN MAP:-->
             <div class="twelve columns mapArea topMarg" id="map">
-                <script type="text/javascript" th:src="@{/scripts/googleMapsCurrent.js}"
-                        src="../static/scripts/googleMapsCurrent.js"></script>
+
+                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
+                        th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;location=current'}"
+                        src="https://www.google.com/maps/embed/v1/">
+
+                </iframe>
+
+                <!--<script type="text/javascript" th:src="@{/scripts/googleMapsCurrent.js}"-->
+                <!--src="../static/scripts/googleMapsCurrent.js"></script>-->
+
                 <!--&lt;!&ndash;preload map above, change HEAD link too if needed:&ndash;&gt;-->
                 <!--<iframe name="gMapSV" class="map" frameborder="0" style="border:0"-->
                 <!--th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"-->
@@ -153,7 +161,6 @@
                 <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
                         th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;center=35.9657642,-78.9567109&amp;zoom=13&amp;maptype=satellite'}"
                         src="https://www.google.com/maps/embed/v1/">
-
                 </iframe>
             </div><!--map-->
 
@@ -185,9 +192,10 @@
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
 
-    <script async="defer"
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">
-    </script>
+    <!--<script async="defer"-->
+    <!--th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${mapService.gMap()}+'&amp;callback=initMap'}"-->
+    <!--src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">-->
+    <!--</script>-->
 
 </div><!--container-->
 
