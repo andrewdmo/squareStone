@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
 
-    <title>Spartan Mapping</title>
+    <title>Spartan Trash Valet, LLC &#8211; Door-to-door trash valets</title>
 
     <link rel="preload" as="style" th:href="@{/css/normalize.css}" href="../static/css/normalize.css"/>
     <link rel="preload" as="style" th:href="@{/css/skeleton.css}" href="../static/css/skeleton.css"/>
@@ -52,17 +52,17 @@
             <div class="four columns" style="width: fit-content">
                 <!--<p class="profileText">Back Home</p>-->
 
-                <a th:href="@{/svIndex}" href="svIndex.html" rel="#home">
+                <a th:href="@{/index}" href="index.html" rel="#home">
                     <img th:src="@{img/spartanLogo.png}" src="../static/img/spartanLogo.png"
                          class="profile pic shadow"/>
                 </a>
             </div>
 
             <div class="eight columns profile name">
-                <a th:href="@{/index}" href="index.html">
+                <a th:href="@{/svindex}" href="svindex.html">
                     <h1 class="text shadow link">Door-to-Door Trash Valet Services</h1></a>
 
-                <a th:href="@{/index}" href="index.html">
+                <a th:href="@{/svindex}" href="svindex.html">
                     <h2 class="text shadow link u-pull-left">Spartan Trash Valet, LLC
                     </h2></a>
 
@@ -82,11 +82,11 @@
                 </p>
             </a>
 
-            <a th:href="@{/svMapping}" href="svMapping.html">
+            <a th:href="@{/svmapping}" href="svmapping.html">
                 <p class="menuText shadow none">Mapping
                 </p>
             </a>
-            <a th:href="@{/svAbout}" href="svAbout.html">
+            <a th:href="@{/svabout}" href="svabout.html">
                 <p class="menuText shadow none">About
                 </p>
             </a>
@@ -118,76 +118,11 @@
     <div class="row middle">
 
         <div class="row main back">
-            <div class="twelve columns">
-                <form th:action="@{/mapping}" action="#" th:object="${mapping}" method="post">
-                    <table>
-                        <!--<tr class="none">-->
-                        <!--<th style="background: #8d8a7e">-->
-                        <!--<h1 class="tableHeader">-->
-                        <!--Map a property:-->
-                        <!--</h1>-->
-                        <!--</th>-->
-                        <!--</tr>-->
-                        <tr class="none">
-                            <td class="tableLabel row">
-                                <label class="tableLabel" for="gaddy">Address:</label>
-                                <input type="text" th:field="*{gaddy}" id="gaddy" class="tableField"
-                                       placeholder="[search feature pending]"/>
-                            </td>
-                        </tr>
-                        <tr class="none">
-                            <td>
-                                <input type="submit" class="button" value="Submit"/>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
-
-            </div>
-
-
-            <div id="autoMap">
-            </div><!--map-->
-
-
-            <br/>
-            <!--DRAWN MAP:-->
-            <div class="twelve columns mapArea topMarg">
-                <!--preload map above, change HEAD link too if needed:-->
-                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
-                        th:src="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
-                        src="https://www.google.com/maps/embed/v1/">
-
-                    <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
-
-                </iframe>
-            </div><!--map-->
-
-            <!--OVERHEAD SAT:-->
-            <div class="twelve columns mapArea">
-                <!--preload map above, change HEAD link too if needed:-->
-                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
-                        th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;center=35.9657642,-78.9567109&amp;zoom=13&amp;maptype=satellite'}"
-                        src="https://www.google.com/maps/embed/v1/">
-
-                </iframe>
-            </div><!--map-->
-
-            <!--STREETVIEW:-->
-            <div class="twelve columns mapArea">
-                <!--preload map above, change HEAD link too if needed:-->
-                <iframe name="gMapSV" class="map" frameborder="0" style="border:0"
-                        th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${mapService.gMap()}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"
-                        src="https://www.google.com/maps/embed/v1/">
-
-                    <!--th:src="@{'https://www.google.com/maps/embed/v1/streetview?key='+${gMap}+'&amp;location='+${mapping.defaultCoord}+'&amp;heading=-95'}"-->
-
-                </iframe>
-            </div><!--map-->
+            [About Spartan Valet]
         </div><!--row main back-->
     </div><!--row middle-->
 
-    <!--&lt;!&ndash;//viewport dims:&ndash;&gt;-->
+    <!--//viewport dims:-->
     <!--<div class="row testBar">-->
     <!--<div class="three columns">&lt;!&ndash;at bottom left/right:&ndash;&gt;-->
     <!--Desktop: drag corner to resize-->
@@ -200,10 +135,6 @@
 
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
-
-    <!--<script async defer-->
-    <!--src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">-->
-    <!--</script>-->
 
 
 </div><!--container-->
