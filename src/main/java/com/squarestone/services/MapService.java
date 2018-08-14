@@ -1,5 +1,7 @@
 package com.squarestone.services;
 
+import com.google.gson.Gson;
+import com.squarestone.entities.GoogGeo;
 import com.squarestone.entities.GotBeta;
 import com.squarestone.entities.Mapping;
 import org.springframework.stereotype.Service;
@@ -36,6 +38,12 @@ public class MapService implements Serializable {
 
     public static String gAutoReq() {
         return gotBeta.getAutoReq();
+    }
+
+    public static GoogGeo gGoogGeo() {
+        Gson gson = new Gson();
+
+        return gson.fromJson(gotBeta.getGoogGeo(), GoogGeo.class);
     }
 
 

@@ -108,7 +108,7 @@ public class PrimaryController implements Serializable {
     }
 
     @GetMapping(value = {"/svmap", "/svmapping"})
-    public String spartanMapping() {
+    public String spartanMapping(Model model) {
         return "svmapping";
     }
 
