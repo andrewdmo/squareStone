@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e40d45d9-b015-4492-97de-f7217c7ce821" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/squareStone.iml" beforeDir="false" afterPath="$PROJECT_DIR$/squareStone.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/entities/GotBeta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/entities/GotBeta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/squarestone/services/MapService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/squarestone/services/MapService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/initMapOLD.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/svmapping.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/svmapping.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/squarestone/controller/PrimaryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/squarestone/controller/PrimaryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/squarestone/entities/GotBeta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/squarestone/entities/GotBeta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/squarestone/services/MapService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/scripts/initMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/scripts/initMap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/svMapping.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/svMapping.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -33,7 +27,7 @@
           <file leaf-file-name="svindex.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svindex.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1080">
+                <state relative-caret-position="15">
                   <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -42,37 +36,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PrimaryController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="615">
-                  <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#2062#2063#0" expanded="true" />
-                    <element signature="e#2092#2093#0" expanded="true" />
-                    <element signature="e#3230#3231#0" expanded="true" />
-                    <element signature="e#3260#3261#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="GotBeta.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/GotBeta.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1">
-                  <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#1499#1500#0" expanded="true" />
-                    <element signature="e#1529#1530#0" expanded="true" />
-                    <element signature="e#1583#1584#0" expanded="true" />
-                    <element signature="e#1624#1625#0" expanded="true" />
-                    <element signature="e#1658#1659#0" expanded="true" />
-                    <element signature="e#1688#1689#0" expanded="true" />
-                    <element signature="e#1734#1735#0" expanded="true" />
-                    <element signature="e#1772#1773#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="16">
+                  <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
                 </state>
               </provider>
             </entry>
@@ -80,8 +48,8 @@
           <file leaf-file-name="svmapping.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svmapping.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="346">
-                  <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
+                <state relative-caret-position="270">
+                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -89,11 +57,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="initMap.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js">
+          <file leaf-file-name="initMapOLD.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMapOLD.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="39" selection-start-line="39" selection-end-line="39" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -104,8 +72,8 @@
           <file leaf-file-name="MapService.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/services/MapService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="83">
-                  <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+                <state relative-caret-position="105">
+                  <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -116,7 +84,7 @@
           <file leaf-file-name="Mapping.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/Mapping.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="255">
                   <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -138,9 +106,21 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/GoogGeo.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="210">
-                  <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+                  <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="initMap.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="225">
+                  <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -171,7 +151,7 @@
           <file leaf-file-name="svStyle.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/svStyle.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
+                <state relative-caret-position="3330">
                   <caret line="222" selection-start-line="222" selection-end-line="222" />
                 </state>
               </provider>
@@ -189,7 +169,7 @@
           <file leaf-file-name="mapping.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mapping.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="224">
+                <state relative-caret-position="2340">
                   <caret line="156" selection-start-line="156" selection-end-line="156" />
                 </state>
               </provider>
@@ -282,8 +262,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/squarestone/config/MongoSessionConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/Mapping.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/config/EnableMongoHttpSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/PurchaseForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/config/MongoConfig.java" />
@@ -327,12 +305,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/scripts/htmlGeoLo.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/GotBeta.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/svmapping.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/GoogLocation.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/entities/GoogGeo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/squarestone/services/MapService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/scripts/initMapOLD.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/svmapping.html" />
       </list>
     </option>
   </component>
@@ -359,9 +339,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="821" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -398,7 +377,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -522,7 +501,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -768,11 +747,12 @@
       <workItem from="1534013885709" duration="313000" />
       <workItem from="1534109449751" duration="186000" />
       <workItem from="1534272310735" duration="3335000" />
+      <workItem from="1534351808128" duration="4546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285517000" />
+    <option name="totallyTimeSpent" value="290063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -801,7 +781,7 @@
       <window_info id="Image Layers" order="9" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3293124" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.64166665" side_tool="true" weight="0.2606132" />
+      <window_info active="true" anchor="bottom" id="Run" order="12" sideWeight="0.6423611" side_tool="true" visible="true" weight="0.2606132" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49427754" weight="0.3256936" />
       <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.55722463" weight="0.2249093" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45207438" weight="0.32810616" />
@@ -810,30 +790,30 @@
       <window_info content_ui="combo" x="21" y="32" width="311" height="812" id="Project" order="5" sideWeight="0.4885404" visible="true" weight="0.12083333" />
       <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
       <window_info id="Web" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.3576389" weight="0.2783019" />
       <window_info anchor="right" id="Theme Preview" order="13" />
       <window_info id="Favorites" order="4" sideWeight="0.5114596" side_tool="true" weight="0.080829754" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.39791667" weight="0.25353774" />
+      <window_info anchor="right" id="SciView" order="17" />
       <window_info id="Azure Explorer" order="10" />
       <window_info id="JavaEE:App" order="0" side_tool="true" />
       <window_info id="Leiningen" order="6" weight="0.3295129" />
-      <window_info anchor="right" x="100" y="123" width="1240" height="617" id="Documentation" order="10" type="FLOATING" />
       <window_info anchor="bottom" id="Dependency Viewer" order="25" weight="0.32900944" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info id="Nl-Palette" order="8" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="HDInsight Spark Submission" order="17" show_stripe_button="false" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.328125" />
       <window_info anchor="right" id="Data View" order="16" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Database Console" order="20" sideWeight="0.49713877" weight="0.3293124" />
+      <window_info anchor="right" x="100" y="123" width="1240" height="617" id="Documentation" order="10" type="FLOATING" />
       <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.5665236" weight="0.32810616" />
-      <window_info anchor="right" id="SciView" order="17" />
       <window_info anchor="right" id="Remote Host" order="14" weight="0.3297568" />
       <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.35833332" weight="0.2783019" />
       <window_info anchor="bottom" id="Duplicates" order="24" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.328125" />
       <window_info anchor="right" id="Properties" order="12" />
       <window_info anchor="bottom" id="Thumbnails" order="23" sideWeight="0.49928468" weight="0.32889965" />
       <window_info anchor="bottom" id="Fluid" order="19" side_tool="true" />
@@ -844,60 +824,60 @@
       <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.39791667" weight="0.25353774" />
       <window_info anchor="right" id="Designer" order="7" />
       <window_info anchor="bottom" id="Amazon EC2" order="15" sideWeight="0.2732475" weight="0.35102534" />
-      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.4620887" weight="0.2962515" />
+      <window_info id="Leiningen" order="6" weight="0.3295129" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="Duplicates" order="24" />
-      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6402778" side_tool="true" visible="true" weight="0.2783019" />
+      <window_info anchor="right" id="Remote Host" order="14" weight="0.3297568" />
       <window_info anchor="bottom" id="Spring" order="11" sideWeight="0.55722463" weight="0.2249093" />
       <window_info anchor="bottom" id="Database Console" order="20" sideWeight="0.49713877" weight="0.3293124" />
-      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49427754" weight="0.3256936" />
+      <window_info anchor="bottom" id="Run" order="12" sideWeight="0.6402778" side_tool="true" visible="true" weight="0.2783019" />
       <window_info anchor="bottom" id="Cvs" order="2" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.24964234" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="UI Designer" order="2" />
-      <window_info id="Web" order="11" side_tool="true" />
+      <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
       <window_info anchor="right" id="Properties" order="12" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.45207438" weight="0.32810616" />
       <window_info anchor="bottom" id="Docker" order="26" weight="0.32900944" />
       <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info id="Colour Chooser" order="12" />
       <window_info anchor="bottom" id="Inspection Results" order="14" sideWeight="0.5665236" weight="0.32810616" />
-      <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
+      <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.7153076" side_tool="true" weight="0.27004716" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.27222222" weight="0.38915095" />
+      <window_info anchor="bottom" id="TODO" order="4" sideWeight="0.49444443" weight="0.31882352" />
       <window_info anchor="right" x="100" y="123" width="1240" height="617" id="Documentation" order="10" type="FLOATING" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="right" x="1238" y="527" width="177" height="317" id="Database" order="11" sideWeight="0.47678572" weight="0.11874106" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.35972223" weight="0.2783019" />
+      <window_info id="Favorites" order="4" sideWeight="0.5114596" side_tool="true" weight="0.080829754" />
       <window_info anchor="bottom" id="Problems" order="21" sideWeight="0.41130185" weight="0.1535671" />
-      <window_info id="Image Layers" order="9" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" weight="0.3293124" />
-      <window_info anchor="right" id="Theme Preview" order="13" />
       <window_info anchor="bottom" id="Dependency Viewer" order="25" weight="0.32900944" />
       <window_info anchor="right" id="Data View" order="16" />
-      <window_info anchor="right" id="Mongo Explorer" order="18" weight="0.18541667" />
       <window_info id="Nl-Palette" order="8" />
       <window_info anchor="right" x="1059" y="211" width="337" height="295" id="Maven Projects" order="6" weight="0.12638889" />
-      <window_info anchor="right" id="Remote Host" order="14" weight="0.3297568" />
       <window_info anchor="bottom" id="HDInsight Spark Submission" order="17" show_stripe_button="false" />
       <window_info anchor="right" auto_hide="true" id="Jenkins" internal_type="SLIDING" order="15" show_stripe_button="false" type="SLIDING" weight="0.32403433" />
-      <window_info id="Azure Explorer" order="10" />
-      <window_info id="JavaEE:App" order="0" side_tool="true" />
+      <window_info anchor="bottom" x="599" y="165" width="212" height="487" id="Structure" order="10" sideWeight="0.5214592" side_tool="true" weight="0.3293124" />
       <window_info anchor="bottom" id="Database Changes" order="22" show_stripe_button="false" />
       <window_info active="true" content_ui="combo" x="21" y="32" width="311" height="812" id="Project" order="5" sideWeight="0.4885404" visible="true" weight="0.15972222" />
       <window_info anchor="right" id="SciView" order="17" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.27222222" weight="0.38915095" />
+      <window_info anchor="right" x="1238" y="527" width="177" height="317" id="Database" order="11" sideWeight="0.47678572" weight="0.11874106" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Leiningen" order="6" weight="0.3295129" />
-      <window_info anchor="bottom" id="TODO" order="4" sideWeight="0.49444443" weight="0.31882352" />
+      <window_info id="JavaEE:App" order="0" side_tool="true" />
+      <window_info id="Web" order="11" side_tool="true" />
       <window_info id="Palette&#9;" order="3" />
-      <window_info id="Favorites" order="4" sideWeight="0.5114596" side_tool="true" weight="0.080829754" />
-      <window_info anchor="bottom" x="599" y="165" width="212" height="487" id="Structure" order="10" sideWeight="0.5214592" side_tool="true" weight="0.3293124" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49427754" weight="0.3256936" />
-      <window_info id="Colour Chooser" order="12" />
+      <window_info anchor="right" id="Theme Preview" order="13" />
+      <window_info id="Azure Explorer" order="10" />
+      <window_info anchor="right" id="Mongo Explorer" order="18" weight="0.18541667" />
+      <window_info id="Image Layers" order="9" />
       <window_info anchor="bottom" id="Azure Activity Log" order="18" />
       <window_info anchor="bottom" id="Inspection" order="3" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.328125" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.35972223" weight="0.2783019" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.4620887" weight="0.2962515" />
       <window_info anchor="bottom" id="Fluid" order="19" side_tool="true" />
-      <window_info id="REPL" order="7" side_tool="true" weight="0.32932693" />
+      <window_info anchor="right" id="Bean Validation" order="1" weight="0.3297568" />
       <window_info anchor="right" id="SvgViewer" order="0" />
     </layout-to-restore>
   </component>
@@ -909,31 +889,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js</url>
-          <line>9</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2092#2093#0" expanded="true" />
-            <element signature="e#3230#3231#0" expanded="true" />
-            <element signature="e#3260#3261#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/GotBeta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -951,7 +910,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMapOLD.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
@@ -1172,26 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svabout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/Clock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1215,21 +1154,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/svStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="3330">
           <caret line="222" selection-start-line="222" selection-end-line="222" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mapping.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
+        <state relative-caret-position="2340">
           <caret line="156" selection-start-line="156" selection-end-line="156" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/controller/PrimaryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
+        <state relative-caret-position="480">
           <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1241,19 +1180,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svindex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/Mapping.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="255">
           <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1282,47 +1211,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/services/MapService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/GoogGeo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svabout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMapOLD.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svindex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/entities/GotBeta.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#1499#1500#0" expanded="true" />
-            <element signature="e#1529#1530#0" expanded="true" />
-            <element signature="e#1583#1584#0" expanded="true" />
-            <element signature="e#1624#1625#0" expanded="true" />
-            <element signature="e#1658#1659#0" expanded="true" />
-            <element signature="e#1688#1689#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="16">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/squarestone/services/MapService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/scripts/initMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/svmapping.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
