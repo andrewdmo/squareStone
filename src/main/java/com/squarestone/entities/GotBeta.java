@@ -23,7 +23,6 @@ public class GotBeta {
         this.libReq = "https://maps.googleapis.com/maps/api/js?key=" + key + "&amp;libraries=places";
         this.autoReq = "https://maps.googleapis.com/maps/api/js?key=" + key + "&amp;libraries=places&amp;callback=initAutocomplete async defer";
         this.googGeo = "https://www.googleapis.com/geolocation/v1/geolocate?key=" + key;
-        System.out.println(googGeo);
     }
 
     public long getId() {

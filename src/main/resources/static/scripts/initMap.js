@@ -7,7 +7,7 @@
 var map, infoWindow;
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('geoLeoMap'), {
         center: {lat: 33.7490, lng: 84.3880},
         zoom: 10
     });

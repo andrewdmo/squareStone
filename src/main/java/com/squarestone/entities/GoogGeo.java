@@ -9,7 +9,22 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class GoogGeo {
 
 
-    public GoogLocation location;
-    public String accuracy;
+    private GoogLocation location;
+    private Long accuracy;
 
+    public GoogLocation getLocation() {
+        return location;
+    }
+
+    public void setLocation(GoogLocation location) {
+        this.location = location;
+    }
+
+    public Long getAccuracy() {
+        return accuracy;
+    }
+
+    public void setAccuracy(Long accuracy) {
+        this.accuracy = accuracy;
+    }
 }

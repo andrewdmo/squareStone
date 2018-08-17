@@ -6,6 +6,10 @@ import com.squarestone.entities.GotBeta;
 import com.squarestone.entities.Mapping;
 import org.springframework.stereotype.Service;
 
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.Serializable;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -40,10 +44,17 @@ public class MapService implements Serializable {
         return gotBeta.getAutoReq();
     }
 
-    public static GoogGeo gGoogGeo() {
-        Gson gson = new Gson();
+    public static GoogGeo gGoogGeo() throws Exception {
 
-        return gson.fromJson(gotBeta.getGoogGeo(), GoogGeo.class);
+        final Client client = ClientBuilder.newClient();
+
+        Response googGeoResponse = client.target(gotBeta.getGoogGeo())
+            .request(MediaType.APPLICATION_JSON_TYPE)
+            .header("Accept", "application/json")
+            .get();
+
+        Gson gson = new Gson();
+        return gson.fromJson(googGeoResponse.readEntity(String.class), GoogGeo.class);
     }
 
 

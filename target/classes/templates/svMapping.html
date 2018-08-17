@@ -17,12 +17,6 @@
     <script defer="defer" type="text/javascript" th:src="@{/scripts/initMap.js}"
             src="../static/scripts/initMap.js"></script>
 
-    <script async="async" class="map"
-            th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${mapService.gMap()}+'&amp;callback=initMap'}"
-            src="https://www.google.com/maps/embed/v1/">
-    </script>
-
-
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
           content="commercial, valet, trash, garbage, service, apartment, ga, georgia, nc, north carolina"/>
@@ -117,11 +111,7 @@
 
             <br/>
             <!--DRAWN MAP:-->
-            <div class="twelve columns mapArea topMarg">
-
-                <div class="map">
-
-                </div>
+            <div class="twelve columns mapArea topMarg" id="geoLeoMap">
 
                 <!--<iframe name="gMapSV" class="map" frameborder="0" style="border:0"-->
                 <!--th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;location=current'}"-->
@@ -179,10 +169,8 @@
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
 
-    <script type="text/javascript"
-            th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${mapService.gMap()}+'&amp;callback=initMap'}"
-            src="https://www.google.com/maps/embed/v1/">
-    </script>
+    <!--<script type="text/javascript" th:src="@{/scripts/initMap.js}"-->
+    <!--src="../static/scripts/initMap.js"></script>-->
 
     <!--<script async="defer"-->
     <!--th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${mapService.gMap()}+'&amp;callback=initMapOLD'}"-->
@@ -190,6 +178,7 @@
     <!--</script>-->
 
 </div><!--container-->
+
 
 </body>
 </html>
