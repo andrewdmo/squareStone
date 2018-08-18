@@ -14,8 +14,8 @@
           th:href="@{'https://www.google.com/maps/embed/v1/place?key='+${mapService.gMap()}+'&amp;q='+${mapping.defaultGaddy}}"
           href="https://www.google.com/maps/embed/v1/"/>
 
-    <script defer="defer" type="text/javascript" th:src="@{/scripts/initMap.js}"
-            src="../static/scripts/initMap.js"></script>
+    <!--<script defer="defer" type="text/javascript" th:src="@{/scripts/initMap.js}"-->
+            <!--src="../static/scripts/initMap.js"></script>-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -112,6 +112,10 @@
             <br/>
             <!--DRAWN MAP:-->
             <div class="twelve columns mapArea topMarg" id="geoLeoMap">
+
+                <Map>
+
+                </Map>
 
                 <!--<iframe name="gMapSV" class="map" frameborder="0" style="border:0"-->
                 <!--th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;location=current'}"-->
