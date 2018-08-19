@@ -16,3 +16,4 @@ if (navigator.geolocation) {
 } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
+}

@@ -91,25 +91,24 @@ export class Map extends React.Component {
             // ...
         }
     }
+}
 
-    Map
-.
-    propTypes = {
-        onMove: React.PropTypes.func,
-        google: React.PropTypes.object,
-        zoom: React.PropTypes.number,
-        initialCenter: React.PropTypes.object
-    }
+Map
+    .propTypes = {
+    onMove: React.PropTypes.func,
+    google: React.PropTypes.object,
+    zoom: React.PropTypes.number,
+    initialCenter: React.PropTypes.object
+}
 
-    Map
-.
-    defaultProps = {
-        onMove: function () {
-        }, // default prop
-        zoom: 13,
-        // San Francisco, by default
-        initialCenter: {
-            lat: 37.774929,
-            lng: -122.419416
-        }
+Map
+    .defaultProps = {
+    onMove: function () {
+    }, // default prop
+    zoom: 13,
+    // San Francisco, by default
+    initialCenter: {
+        lat: 37.774929,
+        lng: -122.419416
     }
+}

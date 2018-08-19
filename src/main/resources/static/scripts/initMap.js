@@ -3,7 +3,6 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 
-
 var map, infoWindow;
 
 function initMap() {

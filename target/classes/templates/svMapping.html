@@ -15,7 +15,7 @@
           href="https://www.google.com/maps/embed/v1/"/>
 
     <!--<script defer="defer" type="text/javascript" th:src="@{/scripts/initMap.js}"-->
-            <!--src="../static/scripts/initMap.js"></script>-->
+    <!--src="../static/scripts/initMap.js"></script>-->
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="keywords"
@@ -31,6 +31,8 @@
     <script src="https://unpkg.com/react-dom@15.4.1/dist/react-dom.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.19.0/babel.min.js"></script>
 
+    <!--<script type="text/javascript" th:src="@{/scripts/initMap.js}"-->
+    <!--src="../static/scripts/initMap.js"></script>-->
 
 </head>
 
@@ -111,11 +113,11 @@
 
             <br/>
             <!--DRAWN MAP:-->
-            <div class="twelve columns mapArea topMarg" id="geoLeoMap">
+            <div class="twelve columns mapArea topMarg">
 
-                <Map>
+                <div id="geoLeoMap">
+                </div>
 
-                </Map>
 
                 <!--<iframe name="gMapSV" class="map" frameborder="0" style="border:0"-->
                 <!--th:src="@{'https://www.google.com/maps/embed/v1/view?key='+${mapService.gMap()}+'&amp;location=current'}"-->
@@ -173,13 +175,11 @@
     <script type="text/babel" th:src="@{/scripts/Clock.js}" src="../static/scripts/Clock.js">
     </script>
 
-    <!--<script type="text/javascript" th:src="@{/scripts/initMap.js}"-->
-    <!--src="../static/scripts/initMap.js"></script>-->
+    <!--<script type="text/javascript" th:src="@{/scripts/initMap.js}"></script>-->
 
-    <!--<script async="defer"-->
-    <!--th:src="@{'https://maps.googleapis.com/maps/api/js?key='+${mapService.gMap()}+'&amp;callback=initMapOLD'}"-->
-    <!--src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&amp;callback=initMap">-->
-    <!--</script>-->
+
+    <script type="text/babel" th:src="@{/scripts/ItNextGoogMapContainer.js}"
+            src="../static/scripts/ItNextGoogMapContainer.js"></script>
 
 </div><!--container-->
 
