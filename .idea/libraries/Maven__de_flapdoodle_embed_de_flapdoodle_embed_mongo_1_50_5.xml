@@ -3,9 +3,7 @@
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/de/flapdoodle/embed/de.flapdoodle.embed.mongo/1.50.5/de.flapdoodle.embed.mongo-1.50.5.jar!/" />
     </CLASSES>
-    <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/de/flapdoodle/embed/de.flapdoodle.embed.mongo/1.50.5/de.flapdoodle.embed.mongo-1.50.5-javadoc.jar!/" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/de/flapdoodle/embed/de.flapdoodle.embed.mongo/1.50.5/de.flapdoodle.embed.mongo-1.50.5-sources.jar!/" />
     </SOURCES>
