@@ -8,7 +8,7 @@ public class GotBeta {
     private static Mapping mapping;
 
     private final long id; //not Long
-    private String key = "AIzaSyAEgsGQb9pHiOX0p8-VpZj46VMwOxg0csU";
+    
     //    private String embedReq = "https://google.com/maps/embed/v1/place?key" + key + "&amp;q=" + mapping.getDefaultGaddy();
     private String libReq;
     private String autoReq;
